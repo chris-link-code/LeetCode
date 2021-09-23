@@ -42,11 +42,23 @@
 - 回溯
 
 ## Git  
-添加远程仓库  
+- 添加远程仓库  
 git remote add origin https://github.com/chris0er/LeetCode.git  
+  
+- add  
+git add .  
 
-push  
+- commit  
+git commit -m "comment"  
+  
+- push  
 git push -u origin main  
 
-fatal: unable to access 'https://github.com/chris0er/LeetCode.git/': OpenSSL SSL_read: Connection was reset, errno 10054  
-git config --global http.sslVerify "false"
+- 查看提交历史，后面加上  --pretty=oneline  能使内容单行显示  
+git log  
+  
+- 查看仓库当前的状态  
+git status  
+  
+- fatal: unable to access 'https://github.com/chris0er/LeetCode.git/': OpenSSL SSL_read: Connection was reset, errno 10054    
+git config --global http.sslVerify "false"  
