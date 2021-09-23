@@ -11,14 +11,16 @@ import util.Utils;
  */
 public class ListNodeIntersection {
     public static void main(String[] args) {
-        ListNode listNode7 = new ListNode(5, null);
-        ListNode listNode6 = new ListNode(5, listNode7);
+        ListNode listNode7 = new ListNode(7, null);
+        ListNode listNode6 = new ListNode(6, listNode7);
         ListNode listNode5 = new ListNode(5, listNode6);
         ListNode listNode4 = new ListNode(4, listNode5);
         ListNode listNode3 = new ListNode(3, listNode6);
         ListNode listNode2 = new ListNode(2, listNode3);
         ListNode listNode1 = new ListNode(1, listNode2);
 
+        Utils.printNode(listNode1);
+        Utils.printNode(listNode4);
         ListNode node = getIntersectionNode(listNode1,listNode4);
         Utils.printNode(node);
     }
