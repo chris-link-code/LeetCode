@@ -10,8 +10,8 @@ import util.Utils;
  * LeetCode 206
  * https://leetcode-cn.com/problems/reverse-linked-list/solution/fan-zhuan-lian-biao-by-leetcode-solution-d1k2/
  */
-public class ListNodeReverseList {
-    private static final Logger LOG = Logger.getLogger(ListNodeReverseList.class);
+public class ListNodeReverse {
+    //private static final Logger LOG = Logger.getLogger(ListNodeReverse.class);
 
     public static void main(String[] args) {
         ListNode listNode5 = new ListNode(5, null);
