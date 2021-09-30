@@ -1,3 +1,5 @@
+package bean;
+
 /**
  * @author chris
  * @create 2021/9/19
