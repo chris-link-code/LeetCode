@@ -17,4 +17,13 @@ public class Utils {
         }
         System.out.println("\r");
     }
+
+    /**
+     * 十进制转4位二进制
+     */
+    public static String integerToBinary(int input) {
+        String binaryString = Integer.toBinaryString(input);
+        int binaryInt = Integer.parseInt(binaryString);
+        return String.format("%04d",binaryInt);
+    }
 }

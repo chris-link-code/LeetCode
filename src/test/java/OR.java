@@ -1,17 +1,22 @@
+import util.Utils;
+
 import java.util.Scanner;
 
 /**
  * @author chris
  * @create 2021/9/27
  * <p>
- * 交换AB两个数
+ * 异或(^)
  */
-public class SwitchAB {
+public class OR {
     public static void main(String[] args) {
-        //testValue();
-        switchValue();
+        testValue();
+        //switchValue();
     }
 
+    /**
+     * 交换两个数
+     */
     public static void switchValue() {
         while (true) {
             System.out.println("请输入两个数A和B");
@@ -32,6 +37,13 @@ public class SwitchAB {
         }
     }
 
+    /**
+     * 异或(^)测试
+     * 异或运算满足交换律和结合律
+     * A ^ 0 = A
+     * A ^ 1 = 取反
+     * A ^ A = 0
+     */
     public static void testValue() {
         while (true) {
             System.out.println("请输入一个数A");
@@ -42,5 +54,7 @@ public class SwitchAB {
             System.out.println("A ^ A = " + (a ^ a));
         }
     }
+
+
 }
 
