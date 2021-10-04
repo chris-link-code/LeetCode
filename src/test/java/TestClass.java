@@ -1,9 +1,12 @@
 import bean.Person;
+import util.Utils;
+
+import java.util.Arrays;
 
 /**
  * @author chris
  * @create 2021/9/19
- *
+ * <p>
  * 得出结论：
  * 用 = 赋值的对象其实就是同一个对象
  * 如：
@@ -14,6 +17,19 @@ import bean.Person;
  */
 public class TestClass {
     public static void main(String[] args) {
+        arrayTest();
+    }
+
+    public static void arrayTest() {
+        int[] array = new int[]{1, 8, 6, 9, 4, 7, 3, 2, 5};
+        Utils.printArray(array);
+        int[] arrayB = Utils.copyArray(array);
+        Arrays.sort(array);
+        Utils.printArray(arrayB);
+        Utils.printArray(array);
+    }
+
+    public static void objectTest() {
         Person tom = new Person("Tom", 15);
         Person jerry = tom;
         //Person jerry = new Person("Jerry",16);
