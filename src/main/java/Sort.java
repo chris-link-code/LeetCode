@@ -15,7 +15,7 @@ public class Sort {
         int[] arrayB = Utils.copyArray(array);
         //Arrays.sort(array);
         bubbleSort(array);
-        Utils.printArray(arrayB);
+        //Utils.printArray(arrayB);
         Utils.printArray(array);
     }
 
@@ -25,8 +25,8 @@ public class Sort {
     public static void bubbleSort(int[] array) {
         int n = array.length;
         for (int i = 0; i < n; i++) {
-            for (int j = n - i; j < n; j++) {
-                if (array[i] < array[j]) {
+            for (int j = i; j < n; j++) {
+                if (array[i] > array[j]) {
                     Utils.swapArray(array, i, j);
                 }
             }
