@@ -22,6 +22,7 @@ public class Utils {
 
     /**
      * 十进制转4位二进制
+     * 仅作测试使用，不严谨
      */
     public static String integerToBinary(int input) {
         String binaryString = Integer.toBinaryString(input);
@@ -49,7 +50,7 @@ public class Utils {
     /**
      * 交换数组i,j两个位置的数
      */
-    public static void swapArray(int[] array,int i,int j) {
+    public static void swapArray(int[] array, int i, int j) {
         array[i] = array[i] + array[j];
         array[j] = array[i] - array[j];
         array[i] = array[i] - array[j];
