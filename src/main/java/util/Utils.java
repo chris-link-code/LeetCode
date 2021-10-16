@@ -51,8 +51,10 @@ public class Utils {
      * 交换数组i,j两个位置的数
      */
     public static void swapArray(int[] array, int i, int j) {
-        array[i] = array[i] + array[j];
-        array[j] = array[i] - array[j];
-        array[i] = array[i] - array[j];
+        if (i != j) {
+            array[i] = array[i] + array[j];
+            array[j] = array[i] - array[j];
+            array[i] = array[i] - array[j];
+        }
     }
 }

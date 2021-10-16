@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Test;
 import util.Utils;
 
 import java.util.Arrays;
@@ -9,13 +10,16 @@ import java.util.Arrays;
  * 排序
  */
 public class Sort {
-    public static void main(String[] args) {
-        int[] array = new int[]{5, 8, 6, 9, 4, 7, 3, 2, 1};
+
+    @Test
+    public void run() {
+        int[] array = new int[]{5, 7, 2, 6, 1, 9, 4, 3, 8};
+//        int[] array = new int[]{1, 3, 2, 4};
         //int[] ascendArray = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
         Utils.printArray(array);
         //int[] arrayB = Utils.copyArray(array);
         //Arrays.sort(array);
-        array = selectionSort(array);
+        array = quickSort(array);
         //Utils.printArray(arrayB);
         Utils.printArray(array);
     }
@@ -28,7 +32,7 @@ public class Sort {
      * <p>
      * 性质：1、时间复杂度：O(n^2) 2、空间复杂度：O(1) 3、稳定排序 4、原地排序
      */
-    public static int[] bubbleSort(int[] array) {
+    public int[] bubbleSort(int[] array) {
         if (array == null || array.length < 2) {
             return array;
         }
@@ -48,7 +52,7 @@ public class Sort {
      * 假如从开始的第一对到结尾的最后一对，相邻的元素之间都没有发生交换的操作，
      * 这意味着右边的元素总是大于等于左边的元素，此时的数组已经是有序的了，我们无需再对剩余的元素重复比较下去了
      */
-    public static int[] betterBubbleSort(int[] array) {
+    public int[] betterBubbleSort(int[] array) {
         if (array == null || array.length < 2) {
             return array;
         }
@@ -79,7 +83,7 @@ public class Sort {
      * <p>
      * 性质：1、时间复杂度：O(n^2) 2、空间复杂度：O(1) 3、非稳定排序 4、原地排序
      */
-    public static int[] selectionSort(int[] array) {
+    public int[] selectionSort(int[] array) {
         if (array == null || array.length < 2) {
             return array;
         }
@@ -92,16 +96,16 @@ public class Sort {
                     min = j;
                 }
             }
-            if (i != min) {
-                Utils.swapArray(array, i, min);
-            }
+            Utils.swapArray(array, i, min);
         }
         return array;
     }
 
     /**
-     * 希尔排序可以说是插入排序的一种变种。无论是插入排序还是冒泡排序，如果数组的最大值刚好是在第一位，要将它挪到正确的位置就需要 n - 1 次移动。
-     * 也就是说，原数组的一个元素如果距离它正确的位置很远的话，则需要与相邻元素交换很多次才能到达正确的位置，这样是相对比较花时间了。
+     * 希尔排序可以说是插入排序的一种变种。
+     * 无论是插入排序还是冒泡排序，如果数组的最大值刚好是在第一位，要将它挪到正确的位置就需要 n - 1 次移动。
+     * 也就是说，原数组的一个元素如果距离它正确的位置很远的话，
+     * 则需要与相邻元素交换很多次才能到达正确的位置，这样是相对比较花时间了
      * <p>
      * 希尔排序就是为了加快速度简单地改进了插入排序，交换不相邻的元素以对数组的局部进行排序。
      * <p>
@@ -109,7 +113,7 @@ public class Sort {
      * 刚开始 h 的大小可以是 h = n / 2,接着让 h = n / 4，让 h 一直缩小，
      * 当 h = 1 时，也就是此时数组中任意间隔为1的元素有序，此时的数组就是有序的了
      */
-    public static int[] shellSort(int[] array) {
+    public int[] shellSort(int[] array) {
         if (array == null || array.length < 2) {
             return array;
         }
@@ -133,7 +137,7 @@ public class Sort {
      * 2、把它与左边第一个元素比较，如果左边第一个元素比它大，则继续与左边第二个元素比较下去，直到遇到不比它大的元素，然后插到这个元素的右边。
      * 3、继续选取第3，4，....n个元素,重复步骤 2 ，选择适当的位置插入。
      */
-    public static int[] insertionSort(int[] array) {
+    public int[] insertionSort(int[] array) {
         if (array == null || array.length < 2) {
             return array;
         }
@@ -156,7 +160,7 @@ public class Sort {
      * 通过递归的方式将大的数组一直分割，直到数组的大小为 1，此时只有一个元素，那么该数组就是有序的了，
      * 之后再把两个数组大小为1的合并成一个大小为2的，再把两个大小为2的合并成4的 ..... 直到全部小的数组合并起来
      */
-    public static int[] mergeSort(int[] array) {
+    public int[] mergeSort(int[] array) {
         if (array == null || array.length < 2) {
             return array;
         }
@@ -171,5 +175,65 @@ public class Sort {
         return array;
     }
 
+    /**
+     * 快速排序
+     * 快速排序的最坏运行情况是 O(n²)，比如说顺序数列的快排。
+     * 但它的平摊期望时间是 O(nlogn)，且 O(nlogn) 记号中隐含的常数因子很小，比复杂度稳定等于 O(nlogn) 的归并排序要小很多。
+     * 所以，对绝大多数顺序性较弱的随机数列而言，快速排序总是优于归并排序
+     * <p>
+     * 算法步骤
+     * 从数列中挑出一个元素，称为 "基准"（pivot）
+     * 重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。
+     * 在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；
+     * 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序
+     */
+    public int[] quickSort(int[] array) {
+        if (array == null || array.length < 2) {
+            return array;
+        }
+        partition(array, 0, array.length - 1);
+        return array;
+    }
+
+    public void partition(int[] array, int left, int right) {
+        if (array == null || array.length < 2 || left >= right) {
+            return;
+        }
+
+        int[] a = Arrays.copyOfRange(array, left, right + 1);
+        Utils.printArray(a);
+
+        int pivot = left;
+        int low = left;
+        int high = right;
+        low++;
+        while (low < high) {
+            while (low < high && array[high] >= array[pivot]) {
+                high--;
+            }
+            while (low < high && array[low] <= array[pivot]) {
+                low++;
+            }
+            Utils.swapArray(array, low, high);
+        }
+        if (array[high] < array[pivot]) {
+            Utils.swapArray(array, pivot, high);
+            pivot = high;
+        } else {
+            Utils.swapArray(array, pivot, high - 1);
+            pivot = high - 1;
+        }
+
+        System.out.println("LEFT [" + left + "]: " + array[left]);
+        System.out.println("RIGHT [" + right + "]: " + array[right]);
+        System.out.println("LOW [" + low + "]: " + array[low]);
+        System.out.println("HIGH [" + high + "]: " + array[high]);
+        System.out.println("PIVOT [" + pivot + "]: " + array[pivot]);
+        Utils.printArray(array);
+        System.out.println();
+
+        partition(array, left, pivot - 1);
+        partition(array, pivot + 1, right);
+    }
 
 }
