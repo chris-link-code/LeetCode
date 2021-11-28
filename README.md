@@ -68,6 +68,9 @@
 
 - 添加远程仓库  
   git remote add origin https://github.com/chris0er/LeetCode.git  
+
+- 初始化
+git init
   
 - add  
 git add .  
@@ -77,6 +80,7 @@ git add .
   
 - push  
 git push -u origin main  
+git push origin master  
 
 - 查看提交历史，后面加上  --pretty=oneline  能使内容单行显示  
   git log  
