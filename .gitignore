@@ -1,7 +1,5 @@
 # Project exclude paths
-.target
-.log
 .idea
-*.class
-*.iml
 .gradle
+log
+build
