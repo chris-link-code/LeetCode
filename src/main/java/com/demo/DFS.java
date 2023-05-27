@@ -1,4 +1,6 @@
-import bean.TreeNode;
+package com.demo;
+
+import com.demo.bean.TreeNode;
 
 /**
  * @author chris

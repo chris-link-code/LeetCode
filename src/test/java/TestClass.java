@@ -1,5 +1,5 @@
-import bean.Person;
-import util.Utils;
+import com.demo.bean.Person;
+import com.demo.util.Utils;
 
 import java.util.Arrays;
 

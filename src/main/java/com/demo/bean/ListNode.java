@@ -1,4 +1,4 @@
-package bean;
+package com.demo.bean;
 
 /**
  * @author chris

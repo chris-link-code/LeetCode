@@ -1,6 +1,7 @@
-import bean.ListNode;
-import org.apache.log4j.Logger;
-import util.Utils;
+package com.demo;
+
+import com.demo.bean.ListNode;
+import com.demo.util.Utils;
 
 /**
  * @author chris

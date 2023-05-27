@@ -1,5 +1,3 @@
-import util.Utils;
-
 import java.util.Scanner;
 
 /**

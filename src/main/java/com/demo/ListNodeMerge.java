@@ -1,5 +1,7 @@
-import bean.ListNode;
-import util.Utils;
+package com.demo;
+
+import com.demo.bean.ListNode;
+import com.demo.util.Utils;
 
 /**
  * @author chris

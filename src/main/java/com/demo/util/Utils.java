@@ -1,6 +1,6 @@
-package util;
+package com.demo.util;
 
-import bean.ListNode;
+import com.demo.bean.ListNode;
 
 import java.util.Arrays;
 

@@ -1,5 +1,6 @@
-import org.junit.jupiter.api.Test;
-import util.Utils;
+package com.demo;
+
+import com.demo.util.Utils;
 
 import java.util.Arrays;
 
