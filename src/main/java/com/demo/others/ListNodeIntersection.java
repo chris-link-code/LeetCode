@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.others;
 
 import com.demo.bean.ListNode;
 import com.demo.util.Utils;
@@ -6,13 +6,13 @@ import com.demo.util.Utils;
 /**
  * @author chris
  * @create 2021/9/23
- *
+ * <p>
  * 找出两个链表的交点
  * LeetCode 160
  * https://leetcode-cn.com/problems/intersection-of-two-linked-lists/solution/xiang-jiao-lian-biao-by-leetcode-solutio-a8jn/
  */
 public class ListNodeIntersection {
-    public static void main(String[] args) {
+    public static void run() {
         ListNode listNode7 = new ListNode(7, null);
         ListNode listNode6 = new ListNode(6, listNode7);
         ListNode listNode5 = new ListNode(5, listNode6);
@@ -23,7 +23,7 @@ public class ListNodeIntersection {
 
         Utils.printNode(listNode1);
         Utils.printNode(listNode4);
-        ListNode node = getIntersectionNode(listNode1,listNode4);
+        ListNode node = getIntersectionNode(listNode1, listNode4);
         Utils.printNode(node);
     }
 

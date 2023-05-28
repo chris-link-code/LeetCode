@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.others;
 
 import com.demo.bean.TreeNode;
 
@@ -9,7 +9,7 @@ import com.demo.bean.TreeNode;
  * 深度优先遍历(Depth First Search, 简称 DFS)
  */
 public class DFS {
-    public static void main(String[] args) {
+    public static void run() {
         TreeNode node3 = new TreeNode(3, null, null);
         TreeNode node4 = new TreeNode(4, null, null);
         TreeNode node2 = new TreeNode(2, node3, node4);

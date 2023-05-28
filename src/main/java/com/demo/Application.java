@@ -1,5 +1,6 @@
 package com.demo;
 
+import com.demo.others.ListNodeMerge;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -9,6 +10,16 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Application {
     public static void main(String[] args) {
-        log.info("main");
+        log.info("java.version: " + System.getProperty("java.version"));
+        //int processors = Runtime.getRuntime().availableProcessors();
+
+//        BinarySearch.run();
+//        DFS.run();
+//        FindOddFromArray.run();
+//        ListNodeIntersection.run();
+//        ListNodeReverse.run();
+//        Sort.run();
+
+        ListNodeMerge.run();
     }
 }

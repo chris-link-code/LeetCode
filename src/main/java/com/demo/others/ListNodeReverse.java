@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.others;
 
 import com.demo.bean.ListNode;
 import com.demo.util.Utils;
@@ -14,7 +14,7 @@ import com.demo.util.Utils;
 public class ListNodeReverse {
     //private static final Logger LOG = Logger.getLogger(ListNodeReverse.class);
 
-    public static void main(String[] args) {
+    public static void run() {
         ListNode listNode5 = new ListNode(5, null);
         ListNode listNode4 = new ListNode(4, listNode5);
         ListNode listNode3 = new ListNode(3, listNode4);
@@ -30,7 +30,7 @@ public class ListNodeReverse {
 
     /**
      * 迭代
-     *
+     * <p>
      * 复杂度分析
      * 时间复杂度：O(n)，其中 n 是链表的长度。需要遍历链表一次
      * 空间复杂度：O(1)
@@ -61,10 +61,10 @@ public class ListNodeReverse {
 
     /**
      * 递归
-     *
+     * <p>
      * 时间复杂度：O(n)，其中 n 是链表的长度。需要对链表的每个节点进行反转操作
      * 空间复杂度：O(n)，其中 n 是链表的长度。空间复杂度主要取决于递归调用的栈空间，最多为 n 层
-     *
+     * <p>
      * [1] -> [2] -> [3] -> [4] -> [5]
      * [5] -> [4] -> [3] -> [2] -> [1]
      * <p>
@@ -141,6 +141,4 @@ public class ListNodeReverse {
         head.next = null;
         return newNode;
     }
-
-
 }

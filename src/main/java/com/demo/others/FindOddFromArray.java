@@ -1,15 +1,15 @@
-package com.demo;
+package com.demo.others;
 
 /**
  * @author chris
  * @create 2021/10/2
- *
+ * <p>
  * 异或(^)题
  * 从数组中找出出现奇数次的数
  */
 public class FindOddFromArray {
-    public static void main(String[] args) {
-        //oneOddOfArray();
+    public static void run() {
+        oneOddOfArray();
         twoOddOfArray();
     }
 
@@ -17,7 +17,7 @@ public class FindOddFromArray {
      * 异或(^)题
      * 一个数组中，一个数出现了奇数次，其余的数出现了偶数次，找出出现奇数次的数
      * 要求时间复杂度O(n)，空间复杂度O(1)
-     *
+     * <p>
      * 解题思路：
      * 利用A ^ A = 0, A ^ 0 = A;
      * 用0遍历异或(^)每一个元素

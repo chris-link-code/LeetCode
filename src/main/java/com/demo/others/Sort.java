@@ -1,7 +1,6 @@
-package com.demo;
+package com.demo.others;
 
 import com.demo.util.Utils;
-import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
@@ -13,8 +12,7 @@ import java.util.Arrays;
  */
 public class Sort {
 
-    @Test
-    public void run() {
+    public static void run() {
 //        int[] array = new int[]{5, 7, 2, 6, 1, 9, 4, 3, 8};
         int[] array = new int[]{1, 23, 41, 7, 11, 3, 2, 9, 14, 4, 5, 5, 5, 8, 6, 19, 31, 52, 13, 63, 17};
         //int[] ascendArray = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -189,7 +187,7 @@ public class Sort {
      * 在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；
      * 递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序
      */
-    public int[] quickSort(int[] array) {
+    public static int[] quickSort(int[] array) {
         if (array == null || array.length < 2) {
             return array;
         }
@@ -197,7 +195,7 @@ public class Sort {
         return array;
     }
 
-    public void partition(int[] array, int left, int right) {
+    public static void partition(int[] array, int left, int right) {
         if (array == null || array.length < 2 || left >= right) {
             return;
         }
