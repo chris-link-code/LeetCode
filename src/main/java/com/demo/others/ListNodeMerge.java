@@ -1,6 +1,6 @@
 package com.demo.others;
 
-import com.demo.bean.ListNode;
+import com.demo.bean.Node;
 import com.demo.util.Utils;
 
 /**
@@ -12,17 +12,17 @@ import com.demo.util.Utils;
  */
 public class ListNodeMerge {
     public static void run() {
-        ListNode listNode7 = new ListNode(7, null);
-        ListNode listNode6 = new ListNode(6, listNode7);
-        ListNode listNode5 = new ListNode(5, listNode6);
-        ListNode listNode4 = new ListNode(9, null);
-        ListNode listNode3 = new ListNode(5, listNode4);
-        ListNode listNode2 = new ListNode(2, listNode3);
-        ListNode listNode1 = new ListNode(1, listNode2);
+        Node node7 = new Node(7, null);
+        Node node6 = new Node(6, node7);
+        Node node5 = new Node(5, node6);
+        Node node4 = new Node(9, null);
+        Node node3 = new Node(5, node4);
+        Node node2 = new Node(2, node3);
+        Node node1 = new Node(1, node2);
 
-        Utils.printNode(listNode1);
-        Utils.printNode(listNode5);
-        ListNode node = mergeListNode(listNode1, listNode5);
+        Utils.printNode(node1);
+        Utils.printNode(node5);
+        Node node = mergeListNode(node1, node5);
         Utils.printNode(node);
     }
 
@@ -30,7 +30,7 @@ public class ListNodeMerge {
      * [1] -> [2] -> [5] -> [9]
      * [5] -> [6] -> [7]
      */
-    public static ListNode mergeListNode(ListNode headA, ListNode headB) {
+    public static Node mergeListNode(Node headA, Node headB) {
         if (headA == null) {
             return headB;
         }
@@ -39,7 +39,7 @@ public class ListNodeMerge {
         }
 
         // TODO
-        ListNode pA = headA, pB = headB, p = null;
+        Node pA = headA, pB = headB, p = null;
         while (pA != null || pB != null) {
             if (pA.value < pB.value) {
                 p = pA;

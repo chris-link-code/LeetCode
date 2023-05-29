@@ -5,11 +5,11 @@ package com.demo.bean;
  *
  * 链表
  */
-public class ListNode {
+public class Node {
     public int value;
-    public ListNode next;
+    public Node next;
 
-    public ListNode(int value, ListNode next) {
+    public Node(int value, Node next) {
         this.value = value;
         this.next = next;
     }

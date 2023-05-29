@@ -1,6 +1,6 @@
 package com.demo.others;
 
-import com.demo.bean.ListNode;
+import com.demo.bean.Node;
 import com.demo.util.Utils;
 
 /**
@@ -13,17 +13,17 @@ import com.demo.util.Utils;
  */
 public class ListNodeIntersection {
     public static void run() {
-        ListNode listNode7 = new ListNode(7, null);
-        ListNode listNode6 = new ListNode(6, listNode7);
-        ListNode listNode5 = new ListNode(5, listNode6);
-        ListNode listNode4 = new ListNode(4, listNode5);
-        ListNode listNode3 = new ListNode(3, listNode6);
-        ListNode listNode2 = new ListNode(2, listNode3);
-        ListNode listNode1 = new ListNode(1, listNode2);
+        Node node7 = new Node(7, null);
+        Node node6 = new Node(6, node7);
+        Node node5 = new Node(5, node6);
+        Node node4 = new Node(4, node5);
+        Node node3 = new Node(3, node6);
+        Node node2 = new Node(2, node3);
+        Node node1 = new Node(1, node2);
 
-        Utils.printNode(listNode1);
-        Utils.printNode(listNode4);
-        ListNode node = getIntersectionNode(listNode1, listNode4);
+        Utils.printNode(node1);
+        Utils.printNode(node4);
+        Node node = getIntersectionNode(node1, node4);
         Utils.printNode(node);
     }
 
@@ -34,11 +34,11 @@ public class ListNodeIntersection {
      * 两个指针同时遍历两个链表，每个指针遍历两个链表各一次
      * 空间复杂度：O(1)
      */
-    public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public static Node getIntersectionNode(Node headA, Node headB) {
         if (headA == null || headB == null) {
             return null;
         }
-        ListNode pA = headA, pB = headB;
+        Node pA = headA, pB = headB;
         while (pA != pB) {
             pA = (pA == null ? headB : pA.next);
             pB = (pB == null ? headA : pB.next);

@@ -13,13 +13,14 @@ public class Application {
         log.info("java.version: " + System.getProperty("java.version"));
         //int processors = Runtime.getRuntime().availableProcessors();
 
+//        Sort.run();
 //        BinarySearch.run();
 //        DFS.run();
 //        FindOddFromArray.run();
 //        ListNodeIntersection.run();
 //        ListNodeReverse.run();
-//        Sort.run();
 
+//        AddTwoNumbers.run();
         ListNodeMerge.run();
     }
 }

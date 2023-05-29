@@ -1,6 +1,6 @@
 package com.demo.util;
 
-import com.demo.bean.ListNode;
+import com.demo.bean.Node;
 
 import java.util.Arrays;
 
@@ -12,7 +12,7 @@ public class Utils {
     /**
      * 遍历打印链表
      */
-    public static void printNode(ListNode node) {
+    public static void printNode(Node node) {
         while (node != null) {
             System.out.println(node.value);
             node = node.next;

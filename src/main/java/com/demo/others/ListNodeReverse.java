@@ -1,6 +1,6 @@
 package com.demo.others;
 
-import com.demo.bean.ListNode;
+import com.demo.bean.Node;
 import com.demo.util.Utils;
 
 /**
@@ -15,17 +15,17 @@ public class ListNodeReverse {
     //private static final Logger LOG = Logger.getLogger(ListNodeReverse.class);
 
     public static void run() {
-        ListNode listNode5 = new ListNode(5, null);
-        ListNode listNode4 = new ListNode(4, listNode5);
-        ListNode listNode3 = new ListNode(3, listNode4);
-        ListNode listNode2 = new ListNode(2, listNode3);
-        ListNode listNode1 = new ListNode(1, listNode2);
+        Node node5 = new Node(5, null);
+        Node node4 = new Node(4, node5);
+        Node node3 = new Node(3, node4);
+        Node node2 = new Node(2, node3);
+        Node node1 = new Node(1, node2);
 
-        Utils.printNode(listNode1);
-        ListNode listNode6;
-        listNode6 = reverse(listNode1);
+        Utils.printNode(node1);
+        Node node6;
+        node6 = reverse(node1);
         //listNode6 = recursion(listNode1);
-        Utils.printNode(listNode6);
+        Utils.printNode(node6);
     }
 
     /**
@@ -35,12 +35,12 @@ public class ListNodeReverse {
      * 时间复杂度：O(n)，其中 n 是链表的长度。需要遍历链表一次
      * 空间复杂度：O(1)
      */
-    public static ListNode reverse(ListNode head) {
-        ListNode previous = null;
-        ListNode current = head;
+    public static Node reverse(Node head) {
+        Node previous = null;
+        Node current = head;
 
         while (current != null) {
-            ListNode next = current.next;
+            Node next = current.next;
             /*
              * 必须要引入变量next替代current.next
              * 后面再将next赋值给current.next
@@ -132,11 +132,11 @@ public class ListNodeReverse {
      * 即
      * [5] -> [4] -> [3] -> [2] -> [1]
      */
-    public static ListNode recursion(ListNode head) {
+    public static Node recursion(Node head) {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode newNode = recursion(head.next);
+        Node newNode = recursion(head.next);
         head.next.next = head;
         head.next = null;
         return newNode;
