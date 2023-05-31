@@ -1,6 +1,6 @@
 package com.demo;
 
-import com.demo.others.ListNodeMerge;
+import com.demo.others.AddTwoNumbers;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -20,7 +20,7 @@ public class Application {
 //        ListNodeIntersection.run();
 //        ListNodeReverse.run();
 
-//        AddTwoNumbers.run();
-        ListNodeMerge.run();
+        AddTwoNumbers.run();
+//        ListNodeMerge.run();
     }
 }

@@ -12,7 +12,9 @@ import com.demo.util.Utils;
  */
 public class ListNodeMerge {
     public static void run() {
-        Node node7 = new Node(7, null);
+        Node node9 = new Node(13, null);
+        Node node8 = new Node(11, node9);
+        Node node7 = new Node(7, node8);
         Node node6 = new Node(6, node7);
         Node node5 = new Node(5, node6);
         Node node4 = new Node(9, null);
@@ -38,14 +40,27 @@ public class ListNodeMerge {
             return headA;
         }
 
-        // TODO
-        Node pA = headA, pB = headB, p = null;
-        while (pA != null || pB != null) {
-            if (pA.value < pB.value) {
-                p = pA;
+        Node head = new Node(-1);
+        Node p = head;
+        while (headA != null && headB != null) {
+            if (headA.value < headB.value) {
+                p.next = headA;
+                headA = headA.next;
+            } else {
+                p.next = headB;
+                headB = headB.next;
             }
+            p = p.next;
+        }
+        if (headA != null) {
+            p.next = headA;
+        }
+        if (headB != null) {
+            p.next = headB;
         }
 
-        return p;
+        return head.next;
     }
+
+    // TODO LeetCode 88
 }

@@ -14,8 +14,13 @@ public class Utils {
      */
     public static void printNode(Node node) {
         while (node != null) {
-            System.out.println(node.value);
+            System.out.print("[");
+            System.out.print(node.value);
+            System.out.print("]");
             node = node.next;
+            if (node != null) {
+                System.out.print(" -> ");
+            }
         }
         System.out.println("\r");
     }
