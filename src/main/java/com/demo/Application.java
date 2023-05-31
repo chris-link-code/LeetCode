@@ -19,8 +19,9 @@ public class Application {
 //        FindOddFromArray.run();
 //        ListNodeIntersection.run();
 //        ListNodeReverse.run();
+//        ListNodeMerge.run();
 
         AddTwoNumbers.run();
-//        ListNodeMerge.run();
+//        Arrays.run();
     }
 }

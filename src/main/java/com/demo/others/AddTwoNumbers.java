@@ -25,11 +25,11 @@ public class AddTwoNumbers {
 
         Utils.printNode(node1);
         Utils.printNode(node4);
-        Utils.printNode(solution(node1, node4));
+        Utils.printNode(addTwoNumbers(node1, node4));
     }
 
     // TODO
-    private static Node solution(Node n1, Node n2) {
+    private static Node addTwoNumbers(Node n1, Node n2) {
         int carry = 0;
         Node head = null;
         Node tail = null;

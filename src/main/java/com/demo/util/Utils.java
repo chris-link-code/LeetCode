@@ -25,6 +25,22 @@ public class Utils {
         System.out.println("\r");
     }
 
+    public static void printIntArray(Integer[] array) {
+        if (array == null || array.length < 1) {
+            return;
+        }
+        int length = array.length;
+        for (int i = 0; i < length; i++) {
+            System.out.print("[");
+            System.out.print(i);
+            System.out.print("]");
+            if (i != (length - 1)) {
+                System.out.print(" -> ");
+            }
+        }
+        System.out.println("\r");
+    }
+
     /**
      * 十进制转4位二进制
      * 仅作测试使用，不严谨

@@ -62,6 +62,4 @@ public class ListNodeMerge {
 
         return head.next;
     }
-
-    // TODO LeetCode 88
 }
