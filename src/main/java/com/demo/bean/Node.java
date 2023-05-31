@@ -1,10 +1,5 @@
 package com.demo.bean;
 
-/**
- * @author chris
- * <p>
- * 链表
- */
 public class Node {
     public int value;
     public Node next;

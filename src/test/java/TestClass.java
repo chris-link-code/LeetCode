@@ -1,5 +1,7 @@
+import com.demo.bean.Node;
 import com.demo.bean.Person;
 import com.demo.util.Utils;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
@@ -16,9 +18,6 @@ import java.util.Arrays;
  * 另一个的属性也会随之改变
  */
 public class TestClass {
-    public static void main(String[] args) {
-        arrayTest();
-    }
 
     public static void arrayTest() {
         int[] array = new int[]{1, 8, 6, 9, 4, 7, 3, 2, 5};
@@ -49,5 +48,16 @@ public class TestClass {
         System.out.println("\nModify jerry");
         System.out.println("Tom: " + tom.name + " - " + tom.age);
         System.out.println("Jerry: " + jerry.name + " - " + jerry.age);
+    }
+
+    @Test
+    public void nodeTest() {
+        Node n1 = new Node(1);
+        Node p = n1;
+        n1.value = 3;
+        Node n2 = new Node(2);
+        p = n2;
+        System.out.println("n1.value: " + n1.value);
+        System.out.println("p.value: " + p.value);
     }
 }
