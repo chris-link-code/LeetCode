@@ -1,6 +1,6 @@
 package com.demo;
 
-import com.demo.code.NodeCase;
+import com.demo.code.Arrays;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -18,10 +18,10 @@ public class Application {
 //        DFS.run();
 //        FindOddFromArray.run();
 //        ListNodeReverse.run();
-        NodeCase.getIntersectionNode();
+//        NodeCase.getIntersectionNode();
 //        NodeCase.mergeListNode();
 //        NodeCase.addTwoNumbers();
 
-//        Arrays.run();
+        Arrays.run();
     }
 }

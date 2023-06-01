@@ -32,7 +32,7 @@ public class Utils {
         int length = array.length;
         for (int i = 0; i < length; i++) {
             System.out.print("[");
-            System.out.print(i);
+            System.out.print(array[i]);
             System.out.print("]");
             if (i != (length - 1)) {
                 System.out.print(" -> ");
