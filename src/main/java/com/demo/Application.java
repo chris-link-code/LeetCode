@@ -1,6 +1,6 @@
 package com.demo;
 
-import com.demo.others.AddTwoNumbers;
+import com.demo.code.NodeCase;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -17,11 +17,11 @@ public class Application {
 //        BinarySearch.run();
 //        DFS.run();
 //        FindOddFromArray.run();
-//        ListNodeIntersection.run();
 //        ListNodeReverse.run();
-//        ListNodeMerge.run();
+        NodeCase.getIntersectionNode();
+//        NodeCase.mergeListNode();
+//        NodeCase.addTwoNumbers();
 
-        AddTwoNumbers.run();
 //        Arrays.run();
     }
 }

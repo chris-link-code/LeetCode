@@ -1,4 +1,4 @@
-package com.demo.others;
+package com.demo.code;
 
 import com.demo.bean.Node;
 import com.demo.util.Utils;
