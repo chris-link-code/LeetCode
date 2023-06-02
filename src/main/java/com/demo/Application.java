@@ -22,6 +22,6 @@ public class Application {
 //        NodeCase.mergeListNode();
 //        NodeCase.addTwoNumbers();
 
-        Arrays.run();
+        Arrays.mergeTwoArrays();
     }
 }
