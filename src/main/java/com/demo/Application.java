@@ -17,11 +17,13 @@ public class Application {
 //        BinarySearch.run();
 //        DFS.run();
 //        FindOddFromArray.run();
+
 //        ListNodeReverse.run();
 //        NodeCase.getIntersectionNode();
 //        NodeCase.mergeListNode();
 //        NodeCase.addTwoNumbers();
 
-        Arrays.mergeTwoArrays();
+//        Arrays.mergeTwoArrays();
+        Arrays.removeElement();
     }
 }
