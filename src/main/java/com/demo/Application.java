@@ -1,5 +1,6 @@
 package com.demo;
 
+import com.demo.code.Arrays;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -24,5 +25,6 @@ public class Application {
 
 //        Arrays.mergeTwoArrays();
 //        Arrays.removeElement();
+        Arrays.removeDuplicates();
     }
 }
