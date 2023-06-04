@@ -104,13 +104,11 @@ public class Arrays {
         int index = 0;
         while (index < length) {
             if (array[index] == value) {
-                if (array[length - 1] == value) {
-                    length--;
-                } else {
-                    array[index] = array[length - 1];
-                }
+                array[index] = array[length - 1];
+                length--;
+            } else {
+                index++;
             }
-            index++;
         }
         return length;
     }

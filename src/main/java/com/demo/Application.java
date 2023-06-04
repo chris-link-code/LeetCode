@@ -1,6 +1,5 @@
 package com.demo;
 
-import com.demo.code.Arrays;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -19,11 +18,11 @@ public class Application {
 //        FindOddFromArray.run();
 
 //        ListNodeReverse.run();
-//        NodeCase.getIntersectionNode();
-//        NodeCase.mergeListNode();
-//        NodeCase.addTwoNumbers();
+//        Nodes.getIntersectionNode();
+//        Nodes.mergeListNode();
+//        Nodes.addTwoNumbers();
 
 //        Arrays.mergeTwoArrays();
-        Arrays.removeElement();
+//        Arrays.removeElement();
     }
 }

@@ -4,7 +4,7 @@ import com.demo.bean.Node;
 import com.demo.util.Utils;
 
 
-public class NodeCase {
+public class Nodes {
 
     public static void getIntersectionNode() {
         Node node7 = new Node(7, null);
