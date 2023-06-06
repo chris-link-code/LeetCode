@@ -27,10 +27,10 @@ public class Arrays {
         Utils.printIntArray(array);
     }
 
-    public static void removeDuplicates() {
+    public static void removeDuplicate() {
         int[] array = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
         Utils.printIntArray(array);
-        int result = removeDuplicates(array);
+        int result = removeDuplicate(array);
         System.out.println("result: " + result);
         Utils.printIntArray(array);
     }
@@ -153,36 +153,23 @@ public class Arrays {
      * 不需要考虑数组中超出新长度后面的元素。
      */
     private static int removeDuplicate(int[] array) {
-        if (array == null || array.length < 1) {
+        if (array == null || array.length == 0) {
             return 0;
         }
         int length = array.length;
-        int result = length;
         int left = 0;
         int right = 1;
         // 由于是有序数组，只要相邻的数字不相等，则说明其唯一
         while (right < length) {
-            //
-        }
-        return result;
-    }
-
-    public static int removeDuplicates(int[] nums) {
-        int n = nums.length;
-        if (n == 0) {
-            return 0;
-        }
-        int fast = 1, slow = 1;
-        while (fast < n) {
-            System.out.println("slow [" + slow + "]: " + nums[slow]);
-            System.out.println("fast [" + fast + "]: " + nums[fast]);
-            System.out.println("");
-            if (nums[fast] != nums[fast - 1]) {
-                nums[slow] = nums[fast];
-                slow++;
+//            System.out.println("slow [" + slow + "]: " + nums[slow]);
+//            System.out.println("fast [" + fast + "]: " + nums[fast]);
+//            System.out.println("");
+            if (array[left] != array[right]) {
+                array[left + 1] = array[right];
+                left++;
             }
-            fast++;
+            right++;
         }
-        return slow;
+        return left + 1;
     }
 }
