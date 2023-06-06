@@ -25,6 +25,7 @@ public class Application {
 
 //        Arrays.mergeTwoArrays();
 //        Arrays.removeElement();
-        Arrays.removeDuplicate();
+//        Arrays.removeDuplicate();
+        Arrays.removeDuplicates();
     }
 }
