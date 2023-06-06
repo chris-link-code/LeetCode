@@ -214,7 +214,8 @@ public class Arrays {
         int left = 1;
         int right = 2;
         while (right < length) {
-            System.out.println("left [" + left + "]: " + array[left] + "\tright [" + right + "]: " + array[right]);
+            System.out.println("left [" + left + "]: " + array[left] + "\t" +
+                    "right [" + right + "]: " + array[right]);
             if (array[right - 1] == array[right + 1]) {
 //                array[left] = array[right];
                 left++;
