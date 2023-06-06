@@ -10,6 +10,7 @@
 |   206    |     ListNodeReverseList     | 2021-09-17 |   链表反转    | 链表  |
 |    27    |   Arrays.removeElement()    | 2023-06-01 |   移除元素    | 数组  |
 |    88    |   Arrays.mergeTwoArrays()   | 2023-06-02 | 合并两个有序数组  | 数组  |
+|    26    |  Arrays.removeDuplicate()   | 2023-06-05 |  删除有序重复项  | 数组  |
 
 # 索引
 
