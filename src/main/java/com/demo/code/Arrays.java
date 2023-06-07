@@ -214,9 +214,13 @@ public class Arrays {
         int left = 1;
         int right = 2;
         while (right < length) {
+            /*
+             * 输入：nums = [0,0,1,1,1,1,2,3,3]
+             * 输出：7, nums = [0,0,1,1,2,3,3]
+             */
             System.out.println("left [" + left + "]: " + array[left] + "\t" +
                     "right [" + right + "]: " + array[right]);
-            if (array[right - 1] == array[right + 1]) {
+            if (array[right - 2] != array[right]) {
 //                array[left] = array[right];
                 left++;
             }
