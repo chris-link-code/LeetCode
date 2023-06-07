@@ -36,8 +36,8 @@ public class Arrays {
     }
 
     public static void removeDuplicates() {
-        int[] array = {1, 1, 1, 2, 2, 3};
-//        int[] array = {0, 0, 1, 1, 1, 1, 2, 3, 3};
+//        int[] array = {1, 1, 1, 2, 2, 3};
+        int[] array = {0, 0, 1, 1, 1, 1, 2, 3, 3};
         Utils.printIntArray(array);
         int result = removeDuplicates(array);
         System.out.println("result: " + result);
@@ -166,17 +166,17 @@ public class Arrays {
             return 0;
         }
         int length = array.length;
-        int left = 0;
-        int right = 1;
+        int slow = 0;
+        int fast = 1;
         // 由于是有序数组，只要相邻的数字不相等，则说明其唯一
-        while (right < length) {
-            if (array[left] != array[right]) {
-                array[left + 1] = array[right];
-                left++;
+        while (fast < length) {
+            if (array[slow] != array[fast]) {
+                array[slow + 1] = array[fast];
+                slow++;
             }
-            right++;
+            fast++;
         }
-        return left + 1;
+        return slow + 1;
     }
 
     /**
@@ -207,25 +207,24 @@ public class Arrays {
      * 不需要考虑数组中超出新长度后面的元素。
      */
     private static int removeDuplicates(int[] array) {
-        if (array == null || array.length == 0) {
+        if (array == null) {
             return 0;
         }
         int length = array.length;
-        int left = 1;
-        int right = 2;
-        while (right < length) {
-            /*
-             * 输入：nums = [0,0,1,1,1,1,2,3,3]
-             * 输出：7, nums = [0,0,1,1,2,3,3]
-             */
-            System.out.println("left [" + left + "]: " + array[left] + "\t" +
-                    "right [" + right + "]: " + array[right]);
-            if (array[right - 2] != array[right]) {
-//                array[left] = array[right];
-                left++;
-            }
-            right++;
+        if (array.length < 3) {
+            return length;
         }
-        return left;
+        int slow = 2;
+        int fast = 2;
+        while (fast < length) {
+//            System.out.println("slow [" + slow + "]: " + array[slow] + "\t" +
+//                    "fast [" + fast + "]: " + array[fast]);
+            if (array[slow - 2] != array[fast]) {
+                array[slow] = array[fast];
+                slow++;
+            }
+            fast++;
+        }
+        return slow;
     }
 }
