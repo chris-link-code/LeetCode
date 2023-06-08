@@ -13,7 +13,6 @@ public class BoyerMoore {
     }
 
     private static void badCharHeuristic(char[] str, int size, int badChar[]) {
-
         // Initialize all occurrences as -1
         for (int i = 0; i < NO_OF_CHARS; i++) {
             badChar[i] = -1;
@@ -48,7 +47,7 @@ public class BoyerMoore {
 			shift, then index j will become -1 after
 			the above loop */
             if (j < 0) {
-                System.out.println("Patterns occur at shift = " + s);
+                System.out.println("pattern index is: " + s);
                 s += (s + m < n) ? m - badChar[txt[s + m]] : 1;
             } else {
                 s += max(1, j - badChar[txt[s + j]]);
@@ -57,8 +56,16 @@ public class BoyerMoore {
     }
 
     public static void run() {
-        char txt[] = "ABAAABCD".toCharArray();
-        char pat[] = "ABC".toCharArray();
+        String string = "ABABCIHGNKJSFHJOIJSADHGHJHAABCD";
+        String pattern = "ABC";
+        char txt[] = string.toCharArray();
+        char pat[] = pattern.toCharArray();
+
+        System.out.println("txt: " + string);
+        System.out.println("pat: " + pattern);
+        System.out.println("txt length: " + txt.length);
+        System.out.println("pat length: " + pat.length);
+
         search(txt, pat);
     }
 }
