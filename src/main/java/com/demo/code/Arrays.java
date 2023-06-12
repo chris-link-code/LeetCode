@@ -46,7 +46,8 @@ public class Arrays {
 
     public static void majorityElement() {
 //        int[] array = {3,2,3};
-        int[] array = {2, 2, 1, 1, 1, 2, 2};
+//        int[] array = {2, 2, 1, 1, 1, 2, 2};
+        int[] array = {7, 7, 5, 7, 5, 1, 5, 7, 5, 5, 7, 7, 7, 7, 7, 7};
         Utils.printIntArray(array);
         int majority = majorityElement(array);
         System.out.println("majority: " + majority);
@@ -259,12 +260,14 @@ public class Arrays {
     private static int majorityElement(int[] nums) {
         int count = 0;
         Integer candidate = null;
+        System.out.println("num\tcandidate\tcount");
 
         for (int num : nums) {
             if (count == 0) {
                 candidate = num;
             }
             count += (num == candidate) ? 1 : -1;
+            System.out.println(num + "\t" + candidate + "\t" + count);
         }
 
         return candidate;
