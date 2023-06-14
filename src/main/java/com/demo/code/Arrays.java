@@ -253,7 +253,6 @@ public class Arrays {
         int count = 0;
         Integer candidate = null;
         System.out.println("number\tcandidate\tcount");
-
         for (int number : array) {
             if (count == 0) {
                 candidate = number;
@@ -261,7 +260,6 @@ public class Arrays {
             count += (number == candidate) ? 1 : -1;
             System.out.println(number + "\t" + candidate + "\t" + count);
         }
-
         return candidate;
     }
 }
