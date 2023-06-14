@@ -249,25 +249,17 @@ public class Arrays {
      * 输入：nums = [2,2,1,1,1,2,2]
      * 输出：2
      */
-    private static int majorityElementS(int[] array) {
-        if (array == null || array.length == 0) {
-            return 0;
-        }
-        int length = array.length;
-        return length;
-    }
-
-    private static int majorityElement(int[] nums) {
+    private static int majorityElement(int[] array) {
         int count = 0;
         Integer candidate = null;
-        System.out.println("num\tcandidate\tcount");
+        System.out.println("number\tcandidate\tcount");
 
-        for (int num : nums) {
+        for (int number : array) {
             if (count == 0) {
-                candidate = num;
+                candidate = number;
             }
-            count += (num == candidate) ? 1 : -1;
-            System.out.println(num + "\t" + candidate + "\t" + count);
+            count += (number == candidate) ? 1 : -1;
+            System.out.println(number + "\t" + candidate + "\t" + count);
         }
 
         return candidate;
