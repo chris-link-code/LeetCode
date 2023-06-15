@@ -2,16 +2,17 @@
 
 # LeetCode
 
-| LeetCode |             实现              |     时间     |    内容     | 知识点 |
-|:--------:|:---------------------------:|:----------:|:---------:|:---:|
-|    2     |    Nodes.addTwoNumbers()    | 2023-05-31 |   两数相加    | 链表  |
-|    21    |    Nodes.mergeListNode()    | 2021-09-17 | 合并两个有序链表  | 链表  |
-|   160    | Nodes.getIntersectionNode() | 2021-09-22 | 找出两个链表的交点 | 链表  |
-|   206    |     ListNodeReverseList     | 2021-09-17 |   链表反转    | 链表  |
-|    27    |   Arrays.removeElement()    | 2023-06-01 |   移除元素    | 数组  |
-|    88    |   Arrays.mergeTwoArrays()   | 2023-06-02 | 合并两个有序数组  | 数组  |
-|    26    |  Arrays.removeDuplicate()   | 2023-06-05 |  删除有序重复项  | 数组  |
-|    80    |  Arrays.removeDuplicates()  | 2023-06-06 |  删除有序重复项  | 数组  |
+| LeetCode |             实现              |     时间     | 知识点 | 备注 |    内容     |
+|:--------:|:---------------------------:|:----------:|:---:|:--:|:---------:|
+|    2     |    Nodes.addTwoNumbers()    | 2023-05-31 | 链表  |    |   两数相加    |
+|    21    |    Nodes.mergeListNode()    | 2021-09-17 | 链表  |    | 合并两个有序链表  |
+|   160    | Nodes.getIntersectionNode() | 2021-09-22 | 链表  |    | 找出两个链表的交点 |
+|   206    |     ListNodeReverseList     | 2021-09-17 | 链表  |    |   链表反转    |
+|    27    |   Arrays.removeElement()    | 2023-06-01 | 数组  |    |   移除元素    |
+|    88    |   Arrays.mergeTwoArrays()   | 2023-06-02 | 数组  |    | 合并两个有序数组  |
+|    26    |  Arrays.removeDuplicate()   | 2023-06-05 | 数组  |    |  删除有序重复项  |
+|    80    |  Arrays.removeDuplicates()  | 2023-06-06 | 数组  |    |  删除有序重复项  |
+|   169    |  Arrays.majorityElement()   | 2023-06-12 | 数组  | *  |   多数元素    |
 
 # 索引
 
