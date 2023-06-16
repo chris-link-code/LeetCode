@@ -54,6 +54,22 @@ public class Arrays {
         System.out.println("majority: " + majority);
     }
 
+    public static void mergeAlternately() {
+//* 示例 1：
+//     * 输入：word1 = "abc", word2 = "pqr"
+//     * 输出："apbqcr"
+//     * 示例 2：
+//     * 输入：word1 = "ab", word2 = "pqrs"
+//     * 输出："apbqrs"
+//     * 示例 3：
+//     * 输入：word1 = "abcd", word2 = "pq"
+//     * 输出："apbqcd"
+        String word1 = "abc";
+        String word2 = "pqr";
+        String merged = mergeAlternately(word1, word2);
+        System.out.println("merged string: " + merged);
+    }
+
     /**
      * 88. 合并两个有序数组
      * <p>

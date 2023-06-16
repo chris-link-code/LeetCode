@@ -29,6 +29,7 @@ public class Application {
 //        Arrays.removeDuplicates();
 
 //        BoyerMoore.run();
-        Arrays.majorityElement();
+//        Arrays.majorityElement();
+        Arrays.mergeAlternately();
     }
 }
