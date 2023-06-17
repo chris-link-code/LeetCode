@@ -13,6 +13,7 @@
 |    26    |  Arrays.removeDuplicate()   | 2023-06-05 | 数组  |    |  删除有序重复项  |
 |    80    |  Arrays.removeDuplicates()  | 2023-06-06 | 数组  |    |  删除有序重复项  |
 |   169    |  Arrays.majorityElement()   | 2023-06-12 | 数组  | *  |   多数元素    |
+|   1768    |  Arrays.mergeAlternately()   | 2023-06-15 | 数组  |    |   交替合并字符串    |
 
 # 索引
 
