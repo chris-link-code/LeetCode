@@ -316,21 +316,18 @@ public class Arrays {
             return word1;
         }
 
-        char[] array1 = word1.toCharArray();
-        char[] array2 = word2.toCharArray();
-
-        int length1 = array1.length;
-        int length2 = array2.length;
+        int length1 = word1.length();
+        int length2 = word2.length();
         int index1 = 0;
         int index2 = 0;
         StringBuilder sb = new StringBuilder();
         while (index1 < length1 || index2 < length2) {
             if (index1 < length1) {
-                sb.append(array1[index1]);
+                sb.append(word1.charAt(index1));
                 index1++;
             }
             if (index2 < length2) {
-                sb.append(array2[index2]);
+                sb.append(word2.charAt(index2));
                 index2++;
             }
         }
