@@ -30,6 +30,7 @@ public class Application {
 
 //        BoyerMoore.run();
 //        Arrays.majorityElement();
-        Arrays.mergeAlternately();
+//        Arrays.mergeAlternately();
+        Arrays.gcdOfStrings();
     }
 }
