@@ -60,4 +60,10 @@ public class TestClass {
         System.out.println("n1.value: " + n1.value);
         System.out.println("p.value: " + p.value);
     }
+
+    @Test
+    public void remainder() {
+        System.out.println("6 % 8 = " + (6 % 8));
+        System.out.println("8 % 6 = " + (8 % 6));
+    }
 }
