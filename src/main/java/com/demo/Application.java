@@ -1,6 +1,6 @@
 package com.demo;
 
-import com.demo.code.Strings;
+import com.demo.code.Arrays;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -30,7 +30,8 @@ public class Application {
 
 //        BoyerMoore.run();
 //        Arrays.majorityElement();
-//        Arrays.mergeAlternately();
-        Strings.gcdOfStrings();
+//        Strings.mergeAlternately();
+//        Strings.gcdOfStrings();
+        Arrays.kidsWithCandies();
     }
 }

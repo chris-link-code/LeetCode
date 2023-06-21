@@ -13,8 +13,9 @@
 |   7    |    26    |  Arrays.removeDuplicate()   | 2023-06-05 | 数组  |    |  删除有序重复项  |
 |   8    |    80    |  Arrays.removeDuplicates()  | 2023-06-06 | 数组  |    |  删除有序重复项  |
 |   9    |   169    |  Arrays.majorityElement()   | 2023-06-12 | 数组  | *  |   多数元素    |
-|   10   |   1768   |  Arrays.mergeAlternately()  | 2023-06-15 | 字符串 |    |  交替合并字符串  |
-|   11   |   1071   |    Arrays.gcdOfStrings()    | 2023-06-17 | 字符串 |    | 字符串的最大公因子 |
+|   10   |   1768   | Strings.mergeAlternately()  | 2023-06-15 | 字符串 |    |  交替合并字符串  |
+|   11   |   1071   |   Strings.gcdOfStrings()    | 2023-06-17 | 字符串 |    | 字符串的最大公因子 |
+|   12   |   1431   |  Arrays.kidsWithCandies()   | 2023-06-20 | 数组  |    | 拥有最多糖果的孩子 |
 
 # 索引
 
