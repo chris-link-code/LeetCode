@@ -347,7 +347,7 @@ public class Arrays {
         int max = 0;
         int length = flower.length;
         // 先算出最多可钟花的地方
-        for (int i = 1; i < length - 1; i++) {
+        /*for (int i = 1; i < length - 1; i++) {
             if (n <= max) {
                 return true;
             }
@@ -356,7 +356,36 @@ public class Arrays {
                 flower[i] = 1;
                 max++;
             }
+        }*/
+        int i = 1;
+        while (i < length - 1) {
+            if (n <= max) {
+                return true;
+            }
+            if (flower[i - 1] == 1) {
+                i++;
+            } else if (flower[i] == 0) {
+                i++;
+                max++;
+            }
         }
         return max < n ? false : true;
+    }
+
+    //
+    // https://leetcode.cn/problems/can-place-flowers/solutions/542634/fei-chang-jian-dan-de-tiao-ge-zi-jie-fa-nhzwc/
+    public boolean canPlaceFlower(int[] flower, int n) {
+        int i = 0;
+        while (i < flower.length && n > 0) {
+            if (flower[i] == 1) {
+                i += 2;
+            } else if (i == flower.length - 1 || flower[i + 1] == 0) {
+                n--;
+                i += 2;
+            } else {
+                i += 3;
+            }
+        }
+        return n <= 0;
     }
 }
