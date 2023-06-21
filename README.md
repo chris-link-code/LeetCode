@@ -16,6 +16,7 @@
 |   10   |   1768   | Strings.mergeAlternately()  | 2023-06-15 | 字符串 |    |  交替合并字符串  |
 |   11   |   1071   |   Strings.gcdOfStrings()    | 2023-06-17 | 字符串 |    | 字符串的最大公因子 |
 |   12   |   1431   |  Arrays.kidsWithCandies()   | 2023-06-20 | 数组  |    | 拥有最多糖果的孩子 |
+|   13   |   605    |  Arrays.canPlaceFlowers()   | 2023-06-21 | 数组  |    |   种花问题    |
 
 # 索引
 

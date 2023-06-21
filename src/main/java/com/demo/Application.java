@@ -32,6 +32,7 @@ public class Application {
 //        Arrays.majorityElement();
 //        Strings.mergeAlternately();
 //        Strings.gcdOfStrings();
-        Arrays.kidsWithCandies();
+//        Arrays.kidsWithCandies();
+        Arrays.canPlaceFlowers();
     }
 }
