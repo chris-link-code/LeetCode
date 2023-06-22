@@ -376,10 +376,11 @@ public class Arrays {
     // https://leetcode.cn/problems/can-place-flowers/solutions/542634/fei-chang-jian-dan-de-tiao-ge-zi-jie-fa-nhzwc/
     public boolean canPlaceFlower(int[] flower, int n) {
         int i = 0;
-        while (i < flower.length && n > 0) {
+        int length = flower.length;
+        while (i < length && n > 0) {
             if (flower[i] == 1) {
                 i += 2;
-            } else if (i == flower.length - 1 || flower[i + 1] == 0) {
+            } else if (i == length - 1 || flower[i + 1] == 0) {
                 n--;
                 i += 2;
             } else {
