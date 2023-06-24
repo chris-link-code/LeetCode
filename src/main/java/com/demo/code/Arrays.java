@@ -357,16 +357,19 @@ public class Arrays {
                 max++;
             }
         }*/
-        int i = 1;
-        while (i < length - 1) {
-            if (n <= max) {
+        int i = 0;
+        while (i < length) {
+            if (max >= n) {
                 return true;
             }
-            if (flower[i - 1] == 1) {
-                i++;
-            } else if (flower[i] == 0) {
-                i++;
+
+            if (flower[i] == 1) {
+                i += 2;
+            } else if (i == length - 1 || flower[i + 1] == 0) {
+                i += 2;
                 max++;
+            } else {
+                i += 3;
             }
         }
         return max < n ? false : true;
