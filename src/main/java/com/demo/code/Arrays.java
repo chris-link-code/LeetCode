@@ -346,23 +346,26 @@ public class Arrays {
     private static boolean canPlaceFlowers(int[] flower, int n) {
         int max = 0;
         int length = flower.length;
-        // 先算出最多可钟花的地方
-        /*for (int i = 1; i < length - 1; i++) {
-            if (n <= max) {
-                return true;
-            }
-            // 如果左中右都为0，则中间就可以种植
-            if (flower[i - 1] == 0 && flower[i] == 0 && flower[i + 1] == 0) {
-                flower[i] = 1;
-                max++;
-            }
-        }*/
         int i = 0;
         while (i < length) {
             if (max >= n) {
                 return true;
             }
-
+            /*
+             * https://leetcode.cn/problems/can-place-flowers/solutions/542634/fei-chang-jian-dan-de-tiao-ge-zi-jie-fa-nhzwc/
+             * 由题目可以得知一个重要前提：1的左右肯定都是0
+             *
+             * 所以只需处理以下两种不同的情况即可：
+             * 1. 当遍历到 [index] 是1时，说明这个位置有花，那么 [index - 1] 和 [index + 1] 肯定都是0，
+             * 而且如果要在下一个位置种花，那必然是 [index + 2] 的位置才有可能，
+             * 因此，当碰到 [index] 是1时，直接跳过下一格 [index + 1]，直接判断 [index + 2] 即可。
+             *
+             * 2. 当遍历到 [index] 是0时，由于每次碰到1都是跳两格，因此前一格必定是0，
+             * 此时只需要判断下一格 [index + 1] 是不是1,即可得出 [index] 这一格能不能种花，
+             * 如果能种，然后这个位置就按照遇到1时处理，即跳两格
+             * 如果 [index] 的后一格 [index + 1] 是1，说明 [index] 这个位置不能种花，
+             * 且之后两格 [index + 1] 和 [index + 2] 也不可能种花，直接跳过3格。
+             */
             if (flower[i] == 1) {
                 i += 2;
             } else if (i == length - 1 || flower[i + 1] == 0) {
@@ -373,23 +376,5 @@ public class Arrays {
             }
         }
         return max < n ? false : true;
-    }
-
-    //
-    // https://leetcode.cn/problems/can-place-flowers/solutions/542634/fei-chang-jian-dan-de-tiao-ge-zi-jie-fa-nhzwc/
-    public boolean canPlaceFlower(int[] flower, int n) {
-        int i = 0;
-        int length = flower.length;
-        while (i < length && n > 0) {
-            if (flower[i] == 1) {
-                i += 2;
-            } else if (i == length - 1 || flower[i + 1] == 0) {
-                n--;
-                i += 2;
-            } else {
-                i += 3;
-            }
-        }
-        return n <= 0;
     }
 }
