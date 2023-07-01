@@ -141,15 +141,51 @@ public class Strings {
      * 输出："leotcede"
      */
     private static String reverseVowels(String s) {
-        Character[] vowels = {'a', 'e', 'i', 'o', 'u'};
         char[] chars = s.toCharArray();
-
         // char[] 转 Character[]
         Character[] characters = new String(chars).chars()
                 .mapToObj(c -> (char) c)
                 .toArray(Character[]::new);
 
         Utils.printIntArray(characters);
-        return characters.toString();
+
+        StringBuilder sb = new StringBuilder();
+        for (Character c : characters) {
+            sb.append(c.toString());
+        }
+        return sb.toString();
+    }
+}
+
+
+class Solution {
+    public String reverseVowels(String s) {
+        int n = s.length();
+        char[] arr = s.toCharArray();
+        int i = 0, j = n - 1;
+        while (i < j) {
+            while (i < n && !isVowel(arr[i])) {
+                ++i;
+            }
+            while (j > 0 && !isVowel(arr[j])) {
+                --j;
+            }
+            if (i < j) {
+                swap(arr, i, j);
+                ++i;
+                --j;
+            }
+        }
+        return new String(arr);
+    }
+
+    public boolean isVowel(char ch) {
+        return "aeiouAEIOU".indexOf(ch) >= 0;
+    }
+
+    public void swap(char[] arr, int i, int j) {
+        char temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }

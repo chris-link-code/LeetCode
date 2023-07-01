@@ -25,6 +25,12 @@ public class Utils {
         System.out.println("\r");
     }
 
+    /**
+     * 打印数组
+     *
+     * @param array
+     * @param <T>
+     */
     public static <T> void printIntArray(T[] array) {
         int length = (array == null) ? 0 : array.length;
         for (int i = 0; i < length; i++) {
@@ -37,6 +43,37 @@ public class Utils {
         }
         System.out.println("\r");
     }
+
+    /**
+     * 交换数组元素
+     *
+     * @param array
+     * @param i
+     * @param j
+     * @param <T>
+     */
+    public static <T> void swap(T[] array, int i, int j) {
+        T temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    /**
+     * 判断字符是否为元音字母
+     *
+     * @param c
+     * @return
+     */
+    public static boolean isVowel(char c) {
+        char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+        for (char vowel : vowels) {
+            if (String.valueOf(vowel).toLowerCase().equals(String.valueOf(c))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     /**
      * 十进制转4位二进制
