@@ -25,11 +25,8 @@ public class Utils {
         System.out.println("\r");
     }
 
-    public static void printIntArray(int[] array) {
-        if (array == null || array.length < 1) {
-            return;
-        }
-        int length = array.length;
+    public static <T> void printIntArray(T[] array) {
+        int length = (array == null) ? 0 : array.length;
         for (int i = 0; i < length; i++) {
             System.out.print("[");
             System.out.print(array[i]);

@@ -1,5 +1,6 @@
 package com.demo.code;
 
+import com.demo.util.Utils;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -31,6 +32,13 @@ public class Strings {
         System.out.println("str1: " + str1);
         System.out.println("str2: " + str2);
         System.out.println("common: " + common);
+    }
+
+    public static void reverseVowels() {
+        String input = "hello";
+        System.out.println("input: " + input);
+        String output = reverseVowels(input);
+        System.out.println("output: " + output);
     }
 
 
@@ -111,7 +119,7 @@ public class Strings {
         return str1.substring(0, gcd(str1.length(), str2.length()));
     }
 
-    public static int gcd(int a, int b) {
+    private static int gcd(int a, int b) {
         int remainder = a % b;
         while (remainder != 0) {
             a = b;
@@ -119,5 +127,29 @@ public class Strings {
             remainder = a % b;
         }
         return b;
+    }
+
+    /**
+     * 345. 反转字符串中的元音字母
+     * 给一个字符串 s ，仅反转字符串中的所有元音字母，并返回结果字符串。
+     * 元音字母包括 'a'、'e'、'i'、'o'、'u'，且可能以大小写两种形式出现不止一次。
+     * 示例 1：
+     * 输入：s = "hello"
+     * 输出："holle"
+     * 示例 2：
+     * 输入：s = "leetcode"
+     * 输出："leotcede"
+     */
+    private static String reverseVowels(String s) {
+        Character[] vowels = {'a', 'e', 'i', 'o', 'u'};
+        char[] chars = s.toCharArray();
+
+        // char[] 转 Character[]
+        Character[] characters = new String(chars).chars()
+                .mapToObj(c -> (char) c)
+                .toArray(Character[]::new);
+
+        Utils.printIntArray(characters);
+        return characters.toString();
     }
 }
