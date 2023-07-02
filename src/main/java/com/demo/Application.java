@@ -34,6 +34,7 @@ public class Application {
 
 //        Strings.mergeAlternately();
 //        Strings.gcdOfStrings();
-        Strings.reverseVowels();
+//        Strings.reverseVowels();
+        Strings.reverseWords();
     }
 }
