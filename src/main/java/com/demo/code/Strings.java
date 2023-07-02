@@ -43,8 +43,8 @@ public class Strings {
     }
 
     public static void reverseWords() {
-        //        String input = "the sky is blue";
-        String input = "  hello world  ";
+        String input = "the sky is blue";
+//        String input = "  hello world  ";
         System.out.println("input: " + input);
         String output = reverseWords(input);
         System.out.println("output: " + output);
@@ -205,12 +205,10 @@ public class Strings {
         int length = words.length;
         int left = 0;
         int right = length - 1;
-        while (left < length - 1) {
-            if (left < right) {
-                Utils.swap(words, left, right);
-                left++;
-                right--;
-            }
+        while (left < right) {
+            Utils.swap(words, left, right);
+            left++;
+            right--;
         }
         return StringUtils.join(words, " ");
     }
