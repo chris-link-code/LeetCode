@@ -2,21 +2,22 @@
 
 # LeetCode
 
-| number | LeetCode |             实现              |     时间     | 知识点 | 备注 |    内容     |
-|:------:|:--------:|:---------------------------:|:----------:|:---:|:--:|:---------:|
-|   1    |    2     |    Nodes.addTwoNumbers()    | 2023-05-31 | 链表  |    |   两数相加    |
-|   2    |    21    |    Nodes.mergeListNode()    | 2021-09-17 | 链表  |    | 合并两个有序链表  |
-|   3    |   160    | Nodes.getIntersectionNode() | 2021-09-22 | 链表  |    | 找出两个链表的交点 |
-|   4    |   206    |     ListNodeReverseList     | 2021-09-17 | 链表  |    |   链表反转    |
-|   5    |    27    |   Arrays.removeElement()    | 2023-06-01 | 数组  |    |   移除元素    |
-|   6    |    88    |   Arrays.mergeTwoArrays()   | 2023-06-02 | 数组  |    | 合并两个有序数组  |
-|   7    |    26    |  Arrays.removeDuplicate()   | 2023-06-05 | 数组  |    |  删除有序重复项  |
-|   8    |    80    |  Arrays.removeDuplicates()  | 2023-06-06 | 数组  |    |  删除有序重复项  |
-|   9    |   169    |  Arrays.majorityElement()   | 2023-06-12 | 数组  | *  |   多数元素    |
-|   10   |   1768   | Strings.mergeAlternately()  | 2023-06-15 | 字符串 |    |  交替合并字符串  |
-|   11   |   1071   |   Strings.gcdOfStrings()    | 2023-06-17 | 字符串 |    | 字符串的最大公因子 |
-|   12   |   1431   |  Arrays.kidsWithCandies()   | 2023-06-20 | 数组  |    | 拥有最多糖果的孩子 |
-|   13   |   605    |  Arrays.canPlaceFlowers()   | 2023-06-21 | 数组  |    |   种花问题    |
+| number | LeetCode |             实现              |     时间     | 知识点 | 备注 |     内容      |
+|:------:|:--------:|:---------------------------:|:----------:|:---:|:--:|:-----------:|
+|   1    |    2     |    Nodes.addTwoNumbers()    | 2023-05-31 | 链表  |    |    两数相加     |
+|   2    |    21    |    Nodes.mergeListNode()    | 2021-09-17 | 链表  |    |  合并两个有序链表   |
+|   3    |   160    | Nodes.getIntersectionNode() | 2021-09-22 | 链表  |    |  找出两个链表的交点  |
+|   4    |   206    |     ListNodeReverseList     | 2021-09-17 | 链表  |    |    链表反转     |
+|   5    |    27    |   Arrays.removeElement()    | 2023-06-01 | 数组  |    |    移除元素     |
+|   6    |    88    |   Arrays.mergeTwoArrays()   | 2023-06-02 | 数组  |    |  合并两个有序数组   |
+|   7    |    26    |  Arrays.removeDuplicate()   | 2023-06-05 | 数组  |    |   删除有序重复项   |
+|   8    |    80    |  Arrays.removeDuplicates()  | 2023-06-06 | 数组  |    |   删除有序重复项   |
+|   9    |   169    |  Arrays.majorityElement()   | 2023-06-12 | 数组  | *  |    多数元素     |
+|   10   |   1768   | Strings.mergeAlternately()  | 2023-06-15 | 字符串 |    |   交替合并字符串   |
+|   11   |   1071   |   Strings.gcdOfStrings()    | 2023-06-17 | 字符串 |    |  字符串的最大公因子  |
+|   12   |   1431   |  Arrays.kidsWithCandies()   | 2023-06-20 | 数组  |    |  拥有最多糖果的孩子  |
+|   13   |   605    |  Arrays.canPlaceFlowers()   | 2023-06-21 | 数组  |    |    种花问题     |
+|   14   |   345    |   Strings.reverseVowels()   | 2023-07-01 | 字符串 |    | 反转字符串中的元音字母 |
 
 # 索引
 

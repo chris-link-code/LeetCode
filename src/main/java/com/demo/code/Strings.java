@@ -35,7 +35,8 @@ public class Strings {
     }
 
     public static void reverseVowels() {
-        String input = "hello";
+//        String input = "hello";
+        String input = "leetcode";
         System.out.println("input: " + input);
         String output = reverseVowels(input);
         System.out.println("output: " + output);
@@ -146,46 +147,29 @@ public class Strings {
         Character[] characters = new String(chars).chars()
                 .mapToObj(c -> (char) c)
                 .toArray(Character[]::new);
+//        Utils.printIntArray(characters);
 
-        Utils.printIntArray(characters);
+        int length = characters.length;
+        int i = 0;
+        int j = length - 1;
+        while (i < j) {
+            while (i < length && !Utils.isVowel(characters[i])) {
+                i++;
+            }
+            while (j < length && !Utils.isVowel(characters[j])) {
+                j--;
+            }
+            if (i < j) {
+                Utils.swap(characters, i, j);
+                i++;
+                j--;
+            }
+        }
 
         StringBuilder sb = new StringBuilder();
         for (Character c : characters) {
             sb.append(c.toString());
         }
         return sb.toString();
-    }
-}
-
-
-class Solution {
-    public String reverseVowels(String s) {
-        int n = s.length();
-        char[] arr = s.toCharArray();
-        int i = 0, j = n - 1;
-        while (i < j) {
-            while (i < n && !isVowel(arr[i])) {
-                ++i;
-            }
-            while (j > 0 && !isVowel(arr[j])) {
-                --j;
-            }
-            if (i < j) {
-                swap(arr, i, j);
-                ++i;
-                --j;
-            }
-        }
-        return new String(arr);
-    }
-
-    public boolean isVowel(char ch) {
-        return "aeiouAEIOU".indexOf(ch) >= 0;
-    }
-
-    public void swap(char[] arr, int i, int j) {
-        char temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
     }
 }
