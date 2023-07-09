@@ -1,6 +1,6 @@
 package com.demo;
 
-import com.demo.code.Strings;
+import com.demo.code.Arrays;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -31,10 +31,11 @@ public class Application {
 //        Arrays.majorityElement();
 //        Arrays.kidsWithCandies();
 //        Arrays.canPlaceFlowers();
+        Arrays.productExceptSelf();
 
 //        Strings.mergeAlternately();
 //        Strings.gcdOfStrings();
 //        Strings.reverseVowels();
-        Strings.reverseWords();
+//        Strings.reverseWords();
     }
 }

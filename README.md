@@ -19,6 +19,7 @@
 |   13   |   605    |  Arrays.canPlaceFlowers()   | 2023-06-21 | 数组  |    |    种花问题     |
 |   14   |   345    |   Strings.reverseVowels()   | 2023-07-01 | 字符串 |    | 反转字符串中的元音字母 |
 |   15   |   151    |   Strings.reverseWords()    | 2023-07-02 | 字符串 |    |  反转字符串中的单词  |
+|   16   |   238    | Arrays.productExceptSelf()  | 2023-07-09 | 数组  |    | 除自身以外数组的乘积  |
 
 # 索引
 
