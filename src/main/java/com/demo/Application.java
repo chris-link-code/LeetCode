@@ -32,7 +32,8 @@ public class Application {
 //        Arrays.kidsWithCandies();
 //        Arrays.canPlaceFlowers();
 //        Arrays.productExceptSelf();
-        Arrays.increasingTriplet();
+//        Arrays.increasingTriplet();
+        Arrays.compress();
 
 //        Strings.mergeAlternately();
 //        Strings.gcdOfStrings();
