@@ -95,6 +95,24 @@ public class Arrays {
     }
 
 
+    public static void increasingTriplet() {
+        /*
+         * 输入：nums = [1,2,3,4,5]
+         * 输出：true
+         * 输入：nums = [5,4,3,2,1]
+         * 输出：false
+         * 输入：nums = [2,1,5,0,4,6]
+         * 输出：true
+         */
+//        Integer[] array = {1, 2, 3, 4, 5};
+//        Integer[] array = {5, 4, 3, 2, 1};
+        Integer[] array = {2, 1, 5, 0, 4, 6};
+        Utils.printIntArray(array);
+        boolean increase = increasingTriplet(array);
+        System.out.println(increase);
+    }
+
+
     /**
      * 88. 合并两个有序数组
      * <p>
@@ -393,7 +411,6 @@ public class Arrays {
         return max < n ? false : true;
     }
 
-
     /**
      * 238. 除自身以外数组的乘积
      * 给你一个整数数组nums，返回数组answer，其中answer[i]等于nums中除nums[i]之外其余各元素的乘积。
@@ -448,7 +465,7 @@ public class Arrays {
      * 因为 nums[3] == 0 < nums[4] == 4 < nums[5] == 6
      */
     private static boolean increasingTriplet(Integer[] array) {
-        boolean increase = false;
+        // 上一轮循环是否为升序
         boolean last = false;
         int i = 1;
         int length = array.length;

@@ -31,7 +31,8 @@ public class Application {
 //        Arrays.majorityElement();
 //        Arrays.kidsWithCandies();
 //        Arrays.canPlaceFlowers();
-        Arrays.productExceptSelf();
+//        Arrays.productExceptSelf();
+        Arrays.increasingTriplet();
 
 //        Strings.mergeAlternately();
 //        Strings.gcdOfStrings();
