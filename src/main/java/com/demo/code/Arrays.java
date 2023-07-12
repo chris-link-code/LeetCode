@@ -548,10 +548,10 @@ public class Arrays {
 
 class Solution {
     public int compress(char[] chars) {
-        int n = chars.length;
+        int length = chars.length;
         int write = 0, left = 0;
-        for (int read = 0; read < n; read++) {
-            if (read == n - 1 || chars[read] != chars[read + 1]) {
+        for (int read = 0; read < length; read++) {
+            if (read == length - 1 || chars[read] != chars[read + 1]) {
                 chars[write++] = chars[read];
                 int num = read - left + 1;
                 if (num > 1) {
