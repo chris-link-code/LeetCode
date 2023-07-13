@@ -69,11 +69,9 @@ public class TestClass {
 
     @Test
     public void reverseCharArray() {
-        System.out.println("------------------------->");
         char[] array = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         Utils.printCharArray(array);
         Utils.reverseCharArray(array, 1, 5);
         Utils.printCharArray(array);
-        System.out.println("<-------------------------");
     }
 }

@@ -42,7 +42,7 @@ public class Utils {
     }
 
     /**
-     * 打印字节数组
+     * 打印字符数组
      */
     public static void printCharArray(char[] array) {
         int length = (array == null) ? 0 : array.length;
@@ -115,7 +115,13 @@ public class Utils {
         }
     }
 
+    /**
+     * 反转字符数组
+     */
     public static void reverseCharArray(char[] array, int left, int right) {
+        if (left < 0 || right > array.length - 1) {
+            return;
+        }
         while (left < right) {
             char temp = array[left];
             array[left] = array[right];
