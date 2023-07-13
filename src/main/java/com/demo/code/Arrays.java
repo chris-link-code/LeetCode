@@ -12,8 +12,8 @@ import java.util.List;
 public class Arrays {
 
     public static void mergeTwoArrays() {
-        Integer[] a1 = {1, 2, 3, 0, 0, 0};
-        Integer[] a2 = {2, 5, 6};
+        int[] a1 = {1, 2, 3, 0, 0, 0};
+        int[] a2 = {2, 5, 6};
 
         Utils.printIntArray(a1);
         Utils.printIntArray(a2);
@@ -22,7 +22,7 @@ public class Arrays {
     }
 
     public static void removeElement() {
-        Integer[] array = {0, 1, 2, 2, 3, 0, 4, 2};
+        int[] array = {0, 1, 2, 2, 3, 0, 4, 2};
         int value = 2;
         Utils.printIntArray(array);
         int length = removeElement(array, value);
@@ -31,7 +31,7 @@ public class Arrays {
     }
 
     public static void removeDuplicate() {
-        Integer[] array = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+        int[] array = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
         Utils.printIntArray(array);
         int result = removeDuplicate(array);
         System.out.println("result: " + result);
@@ -40,7 +40,7 @@ public class Arrays {
 
     public static void removeDuplicates() {
 //        int[] array = {1, 1, 1, 2, 2, 3};
-        Integer[] array = {0, 0, 1, 1, 1, 1, 2, 3, 3};
+        int[] array = {0, 0, 1, 1, 1, 1, 2, 3, 3};
         Utils.printIntArray(array);
         int result = removeDuplicates(array);
         System.out.println("result: " + result);
@@ -50,14 +50,14 @@ public class Arrays {
     public static void majorityElement() {
 //        int[] array = {3,2,3};
 //        int[] array = {2, 2, 1, 1, 1, 2, 2};
-        Integer[] array = {7, 7, 5, 7, 5, 1, 5, 7, 5, 5, 7, 7, 7, 7, 7, 7};
+        int[] array = {7, 7, 5, 7, 5, 1, 5, 7, 5, 5, 7, 7, 7, 7, 7, 7};
         Utils.printIntArray(array);
         int majority = majorityElement(array);
         System.out.println("majority: " + majority);
     }
 
     public static void kidsWithCandies() {
-        Integer[] candies = {2, 3, 5, 1, 3};
+        int[] candies = {2, 3, 5, 1, 3};
         int extraCandies = 3;
         Utils.printIntArray(candies);
         System.out.println("extraCandies: " + extraCandies);
@@ -71,7 +71,7 @@ public class Arrays {
         //1,0,0,0,1
         //1,0,0,0,0,0,1
         //1,0,0,0,0,0,0,0,1
-        Integer[] flower = {1, 0, 0, 0, 0, 0, 1};
+        int[] flower = {1, 0, 0, 0, 0, 0, 1};
         int n = 2;
         Utils.printIntArray(flower);
         System.out.println("n: " + n);
@@ -87,10 +87,10 @@ public class Arrays {
          * 输入: nums = [-1,1,0,-3,3]
          * 输出: [0,0,9,0,0]
          */
-//        Integer[] array = {1, 2, 3, 4};
-        Integer[] array = {-1, 1, 0, -3, 3};
+//        int[] array = {1, 2, 3, 4};
+        int[] array = {-1, 1, 0, -3, 3};
         Utils.printIntArray(array);
-        Integer[] answer = productExceptSelf(array);
+        int[] answer = productExceptSelf(array);
         Utils.printIntArray(answer);
     }
 
@@ -103,9 +103,9 @@ public class Arrays {
          * 输入：nums = [2,1,5,0,4,6]
          * 输出：true
          */
-//        Integer[] array = {1, 2, 3, 4, 5};
-//        Integer[] array = {5, 4, 3, 2, 1};
-        Integer[] array = {2, 1, 5, 0, 4, 6};
+//        int[] array = {1, 2, 3, 4, 5};
+//        int[] array = {5, 4, 3, 2, 1};
+        int[] array = {2, 1, 5, 0, 4, 6};
         Utils.printIntArray(array);
         boolean increase = increasingTriplet(array);
         System.out.println(increase);
@@ -142,7 +142,7 @@ public class Arrays {
      * 解释：需要合并 [1,2,3] 和 [2,5,6] 。
      * 合并结果是 [1,2,2,3,5,6] ，其中斜体加粗标注的为 nums1 中的元素。
      */
-    private static void mergeTwoArrays(Integer[] a1, int m, Integer[] a2, int n) {
+    private static void mergeTwoArrays(int[] a1, int m, int[] a2, int n) {
         int i1 = m - 1;
         int i2 = n - 1;
         int current = 0;
@@ -198,7 +198,7 @@ public class Arrays {
      * 解释：函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。
      * 注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。
      */
-    private static int removeElement(Integer[] array, int value) {
+    private static int removeElement(int[] array, int value) {
         int length = array.length;
         int index = 0;
         while (index < length) {
@@ -243,7 +243,7 @@ public class Arrays {
      * 解释：函数应该返回新的长度 5 ，并且原数组nums的前五个元素被修改为 0, 1, 2, 3, 4。
      * 不需要考虑数组中超出新长度后面的元素。
      */
-    private static int removeDuplicate(Integer[] array) {
+    private static int removeDuplicate(int[] array) {
         if (array == null || array.length == 0) {
             return 0;
         }
@@ -288,7 +288,7 @@ public class Arrays {
      * 解释：函数应返回新长度 length = 7, 并且原数组的前五个元素被修改为 0, 0, 1, 1, 2, 3, 3 。
      * 不需要考虑数组中超出新长度后面的元素。
      */
-    private static int removeDuplicates(Integer[] array) {
+    private static int removeDuplicates(int[] array) {
         if (array == null) {
             return 0;
         }
@@ -322,9 +322,9 @@ public class Arrays {
      * 输入：nums = [2,2,1,1,1,2,2]
      * 输出：2
      */
-    private static int majorityElement(Integer[] array) {
+    private static int majorityElement(int[] array) {
         int count = 0;
-        Integer candidate = null;
+        int candidate = -1;
         System.out.println("number\tcandidate\tcount");
         for (int number : array) {
             if (count == 0) {
@@ -359,7 +359,7 @@ public class Arrays {
      * 输入：candies = [12,1,12], extraCandies = 10
      * 输出：[true,false,true]
      */
-    private static List<Boolean> kidsWithCandies(Integer[] candies, int extraCandies) {
+    private static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         List<Boolean> list = new ArrayList<>();
         int max = 0;
         int length = candies.length;
@@ -389,7 +389,7 @@ public class Arrays {
      * 输入：flowerbed = [1,0,0,0,1], n = 2
      * 输出：false
      */
-    private static boolean canPlaceFlowers(Integer[] flower, int n) {
+    private static boolean canPlaceFlowers(int[] flower, int n) {
         int max = 0;
         int length = flower.length;
         int i = 0;
@@ -434,9 +434,9 @@ public class Arrays {
      * 输入: nums = [-1,1,0,-3,3]
      * 输出: [0,0,9,0,0]
      */
-    private static Integer[] productExceptSelf(Integer[] array) {
+    private static int[] productExceptSelf(int[] array) {
         int length = array.length;
-        Integer[] answer = new Integer[length];
+        int[] answer = new int[length];
 
         // answer[i] 表示索引 i 左侧所有元素的乘积
         // 因为索引为 '0' 的元素左侧没有元素， 所以 answer[0] = 1
@@ -477,7 +477,7 @@ public class Arrays {
      * 解释：三元组 (3, 4, 5) 满足题意，
      * 因为 nums[3] == 0 < nums[4] == 4 < nums[5] == 6
      */
-    private static boolean increasingTriplet(Integer[] array) {
+    private static boolean increasingTriplet(int[] array) {
         // 上一轮循环是否为升序
         boolean last = false;
         int i = 1;

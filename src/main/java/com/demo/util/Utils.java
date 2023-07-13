@@ -26,12 +26,25 @@ public class Utils {
     }
 
     /**
-     * 打印数组
-     *
-     * @param array
-     * @param <T>
+     * 打印整形数组
      */
-    public static <T> void printIntArray(T[] array) {
+    public static void printIntArray(int[] array) {
+        int length = (array == null) ? 0 : array.length;
+        for (int i = 0; i < length; i++) {
+            System.out.print("[");
+            System.out.print(array[i]);
+            System.out.print("]");
+            if (i != (length - 1)) {
+                System.out.print(" -> ");
+            }
+        }
+        System.out.println("\r");
+    }
+
+    /**
+     * 打印字节数组
+     */
+    public static void printCharArray(char[] array) {
         int length = (array == null) ? 0 : array.length;
         for (int i = 0; i < length; i++) {
             System.out.print("[");
@@ -74,7 +87,6 @@ public class Utils {
         return false;
     }
 
-
     /**
      * 十进制转4位二进制
      * 仅作测试使用，不严谨
@@ -83,16 +95,6 @@ public class Utils {
         String binaryString = Integer.toBinaryString(input);
         int binaryInt = Integer.parseInt(binaryString);
         return String.format("%04d", binaryInt);
-    }
-
-    /**
-     * 遍历打印数组
-     */
-    public static void printArray(int[] array) {
-        for (int i : array) {
-            System.out.print(i + "\t");
-        }
-        System.out.println("\r");
     }
 
     /**
@@ -110,6 +112,16 @@ public class Utils {
             array[i] = array[i] + array[j];
             array[j] = array[i] - array[j];
             array[i] = array[i] - array[j];
+        }
+    }
+
+    public static void reverseCharArray(char[] array, int left, int right) {
+        while (left < right) {
+            char temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
+            left++;
+            right--;
         }
     }
 }

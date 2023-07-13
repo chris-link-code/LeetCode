@@ -9,7 +9,7 @@ import com.demo.util.Utils;
 public class BinarySearch {
     public static void run() {
         int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 21, 25};
-        Utils.printArray(array);
+        Utils.printIntArray(array);
         System.out.println(search(array, 19));
     }
 

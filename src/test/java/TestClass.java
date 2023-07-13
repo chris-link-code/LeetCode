@@ -21,11 +21,11 @@ public class TestClass {
 
     public static void arrayTest() {
         int[] array = new int[]{1, 8, 6, 9, 4, 7, 3, 2, 5};
-        Utils.printArray(array);
+        Utils.printIntArray(array);
         int[] arrayB = Utils.copyArray(array);
         Arrays.sort(array);
-        Utils.printArray(arrayB);
-        Utils.printArray(array);
+        Utils.printIntArray(arrayB);
+        Utils.printIntArray(array);
     }
 
     public static void objectTest() {
@@ -65,5 +65,15 @@ public class TestClass {
     public void remainder() {
         System.out.println("6 % 8 = " + (6 % 8));
         System.out.println("8 % 6 = " + (8 % 6));
+    }
+
+    @Test
+    public void reverseCharArray() {
+        System.out.println("------------------------->");
+        char[] array = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+        Utils.printCharArray(array);
+        Utils.reverseCharArray(array, 1, 5);
+        Utils.printCharArray(array);
+        System.out.println("<-------------------------");
     }
 }

@@ -16,12 +16,12 @@ public class Sort {
 //        int[] array = new int[]{5, 7, 2, 6, 1, 9, 4, 3, 8};
         int[] array = new int[]{1, 23, 41, 7, 11, 3, 2, 9, 14, 4, 5, 5, 5, 8, 6, 19, 31, 52, 13, 63, 17};
         //int[] ascendArray = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
-        Utils.printArray(array);
+        Utils.printIntArray(array);
         //int[] arrayB = Utils.copyArray(array);
         //Arrays.sort(array);
         array = quickSort(array);
-        //Utils.printArray(arrayB);
-        Utils.printArray(array);
+        //Utils.printIntArray(arrayB);
+        Utils.printIntArray(array);
     }
 
     /**
@@ -201,7 +201,7 @@ public class Sort {
         }
 
         int[] a = Arrays.copyOfRange(array, left, right + 1);
-        Utils.printArray(a);
+        Utils.printIntArray(a);
 
         int pivot = left;
         int low = left;
@@ -229,7 +229,7 @@ public class Sort {
         System.out.println("LOW [" + low + "]: " + array[low]);
         System.out.println("HIGH [" + high + "]: " + array[high]);
         System.out.println("PIVOT [" + pivot + "]: " + array[pivot]);
-        Utils.printArray(array);
+        Utils.printIntArray(array);
         System.out.println();
 
         partition(array, left, pivot - 1);
