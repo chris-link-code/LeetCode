@@ -557,6 +557,7 @@ class Solution {
                 if (num > 1) {
                     int anchor = write;
                     while (num > 0) {
+                        // 将num转换成char
                         chars[write++] = (char) (num % 10 + '0');
                         num /= 10;
                     }
