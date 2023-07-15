@@ -121,8 +121,10 @@ public class Arrays {
          * 输出：返回 4 ，输入数组的前 4 个字符应该是：["a","b","1","2"]。
          */
         char[] array = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
+        Utils.printCharArray(array);
         int count = compress(array);
         System.out.println(count);
+        Utils.printCharArray(array);
     }
 
 
@@ -553,13 +555,13 @@ class Solution {
         for (int read = 0; read < length; read++) {
             if (read == length - 1 || chars[read] != chars[read + 1]) {
                 chars[write++] = chars[read];
-                int num = read - left + 1;
-                if (num > 1) {
+                int count = read - left + 1;
+                if (count > 1) {
                     int anchor = write;
-                    while (num > 0) {
+                    while (count > 0) {
                         // 将num转换成char
-                        chars[write++] = (char) (num % 10 + '0');
-                        num /= 10;
+                        chars[write++] = (char) (count % 10 + '0');
+                        count /= 10;
                     }
                     reverse(chars, anchor, write - 1);
                 }
