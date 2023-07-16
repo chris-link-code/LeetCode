@@ -548,8 +548,9 @@ public class Arrays {
         // 相同字符的数量
         int count = 0;
         for (int read = 0; read < length; read++) {
-            if (array[read] != array[read + 1]) {
+            if (read == length - 1 || array[read] != array[read + 1]) {
                 count = read - left + 1;
+
             }
         }
         return write + 1;
