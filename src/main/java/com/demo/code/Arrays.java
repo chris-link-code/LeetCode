@@ -542,22 +542,17 @@ public class Arrays {
         if (length < 2) {
             return length;
         }
-        int i = 0;
-        int j = 0;
-        int count = 1;
-        char last = ' ';
-        while (i < length) {
-            if (array[i] == last) {
-                count++;
-            } else {
-                array[j] = last;
-                array[j + 1] = (char) count;
-                count = 1;
-                j++;
+        // 相同字符的字符串最左边
+        int left = 0;
+        int write = 0;
+        // 相同字符的数量
+        int count = 0;
+        for (int read = 0; read < length; read++) {
+            if (array[read] != array[read + 1]) {
+                count = read - left + 1;
             }
-            last = array[i];
         }
-        return j;
+        return write + 1;
     }
 }
 
