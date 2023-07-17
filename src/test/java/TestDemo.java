@@ -120,4 +120,17 @@ public class TestDemo {
         }
         System.out.println("\n");
     }
+
+    /**
+     * 数字转倒序字符串
+     */
+    public void intToString() {
+        int number = 987654321;
+        StringBuilder sb = new StringBuilder();
+        while (number > 0) {
+            if (number > 9) {
+                // TODO
+            }
+        }
+    }
 }

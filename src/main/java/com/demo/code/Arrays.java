@@ -550,7 +550,18 @@ public class Arrays {
         for (int read = 0; read < length; read++) {
             if (read == length - 1 || array[read] != array[read + 1]) {
                 count = read - left + 1;
-
+                array[write] = array[read];
+                write++;
+                left = write;
+                // 此时read在相同字符的字符串最右边
+                // TODO 数字转化成字符串
+                /*while (count > 0) {
+                    if (count > 9) {
+                        array[write] = (char) (count % 10 + '0');
+                    }else {
+                        array[write] = (char) (count % 10 + '0');
+                    }
+                }*/
             }
         }
         return write + 1;
