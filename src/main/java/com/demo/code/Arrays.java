@@ -120,11 +120,11 @@ public class Arrays {
          * 输入：chars = ["a","b","b","b","b","b","b","b","b","b","b","b","b"]
          * 输出：返回 4 ，输入数组的前 4 个字符应该是：["a","b","1","2"]。
          */
-        char[] array = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
+//        char[] array = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
+        char[] array = {'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'};
         Utils.printCharArray(array);
         int count = compress(array);
-        System.out.println(count);
-        Utils.printCharArray(array);
+        Utils.printCharArray(array, 0, count - 1);
     }
 
 
@@ -549,22 +549,24 @@ public class Arrays {
         int count = 0;
         for (int read = 0; read < length; read++) {
             if (read == length - 1 || array[read] != array[read + 1]) {
-                count = read - left + 1;
+                // 此时read在相同字符的字符串最右边
                 array[write] = array[read];
                 write++;
-                left = write;
-                // 此时read在相同字符的字符串最右边
-                // TODO 数字转化成字符串
-                /*while (count > 0) {
-                    if (count > 9) {
+                count = read - left + 1;
+                if (count > 1) {
+                    // 设置一个锚点，标记记录数字的位置
+                    int anchor = write;
+                    while (count > 0) {
                         array[write] = (char) (count % 10 + '0');
-                    }else {
-                        array[write] = (char) (count % 10 + '0');
+                        count /= 10;
+                        write++;
                     }
-                }*/
+                    Utils.reverseCharArray(array, anchor, write - 1);
+                }
+                left = read + 1;
             }
         }
-        return write + 1;
+        return write;
     }
 }
 

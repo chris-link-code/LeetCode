@@ -58,6 +58,25 @@ public class Utils {
     }
 
     /**
+     * 打印字符数组
+     */
+    public static void printCharArray(char[] array, int left, int right) {
+        int length = (array == null) ? 0 : array.length;
+        if (left < 0 || right > length - 1 || left >= right) {
+            return;
+        }
+        for (int i = left; i < right + 1; i++) {
+            System.out.print("[");
+            System.out.print(array[i]);
+            System.out.print("]");
+            if (i != right) {
+                System.out.print(" -> ");
+            }
+        }
+        System.out.println("\r");
+    }
+
+    /**
      * 交换数组元素
      *
      * @param array
@@ -119,7 +138,7 @@ public class Utils {
      * 反转字符数组
      */
     public static void reverseCharArray(char[] array, int left, int right) {
-        if (left < 0 || right > array.length - 1) {
+        if (left < 0 || right > array.length - 1 || left >= right) {
             return;
         }
         while (left < right) {

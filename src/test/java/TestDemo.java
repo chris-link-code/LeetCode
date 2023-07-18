@@ -124,13 +124,16 @@ public class TestDemo {
     /**
      * 数字转倒序字符串
      */
+    @Test
     public void intToString() {
         int number = 987654321;
+        System.out.println(number);
         StringBuilder sb = new StringBuilder();
         while (number > 0) {
-            if (number > 9) {
-                // TODO
-            }
+//            System.out.println(number % 10);
+            sb.append(number % 10);
+            number /= 10;
         }
+        System.out.println(sb);
     }
 }
