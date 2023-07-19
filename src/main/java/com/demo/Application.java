@@ -1,6 +1,6 @@
 package com.demo;
 
-import com.demo.code.Arrays;
+import com.demo.code.Pointers;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -33,11 +33,13 @@ public class Application {
 //        Arrays.canPlaceFlowers();
 //        Arrays.productExceptSelf();
 //        Arrays.increasingTriplet();
-        Arrays.compress();
+//        Arrays.compress();
 
 //        Strings.mergeAlternately();
 //        Strings.gcdOfStrings();
 //        Strings.reverseVowels();
 //        Strings.reverseWords();
+
+        Pointers.moveZero();
     }
 }
