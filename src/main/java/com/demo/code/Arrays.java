@@ -546,7 +546,7 @@ public class Arrays {
         int left = 0;
         int write = 0;
         // 相同字符的数量
-        int count = 0;
+        int count;
         for (int read = 0; read < length; read++) {
             if (read == length - 1 || array[read] != array[read + 1]) {
                 // 此时read在相同字符的字符串最右边
@@ -567,40 +567,5 @@ public class Arrays {
             }
         }
         return write;
-    }
-}
-
-
-class Solution {
-    public int compress(char[] chars) {
-        int length = chars.length;
-        int write = 0, left = 0;
-        for (int read = 0; read < length; read++) {
-            if (read == length - 1 || chars[read] != chars[read + 1]) {
-                chars[write++] = chars[read];
-                int count = read - left + 1;
-                if (count > 1) {
-                    int anchor = write;
-                    while (count > 0) {
-                        // 将num转换成char
-                        chars[write++] = (char) (count % 10 + '0');
-                        count /= 10;
-                    }
-                    reverse(chars, anchor, write - 1);
-                }
-                left = read + 1;
-            }
-        }
-        return write;
-    }
-
-    public void reverse(char[] chars, int left, int right) {
-        while (left < right) {
-            char temp = chars[left];
-            chars[left] = chars[right];
-            chars[right] = temp;
-            left++;
-            right--;
-        }
     }
 }
