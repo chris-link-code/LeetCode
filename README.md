@@ -22,6 +22,7 @@
 |   16   |   238    | Arrays.productExceptSelf()  | 2023-07-09 | 数组  |    | 除自身以外数组的乘积  |
 |   17   |   334    | Arrays.increasingTriplet()  | 2023-07-09 | 数组  |    |  递增的三元子序列   |
 |   18   |   443    |      Arrays.compress()      | 2023-07-19 | 数组  | *  |    压缩字符串    |
+|   19   |   283    |     Pointers.moveZero()     | 2023-07-20 | 双指针 | *  |     移动零     |
 
 # 索引
 
