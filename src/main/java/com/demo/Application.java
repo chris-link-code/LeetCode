@@ -40,6 +40,7 @@ public class Application {
 //        Strings.reverseVowels();
 //        Strings.reverseWords();
 
-        Pointers.moveZero();
+//        Pointers.moveZero();
+        Pointers.isSubsequence();
     }
 }
