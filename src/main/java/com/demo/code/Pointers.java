@@ -131,4 +131,7 @@ public class Pointers {
         }
         return i == m;
     }
+    // TODO 动态规划
+    // https://leetcode.cn/problems/is-subsequence/solution/pan-duan-zi-xu-lie-by-leetcode-solution/
+    // https://www.cnblogs.com/arknights/articles/13387155.html
 }
