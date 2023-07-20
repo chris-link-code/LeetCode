@@ -118,6 +118,7 @@ public class Pointers {
      * 输出：false
      */
     private static boolean isSubsequence(String s, String t) {
+        // 时间复杂度：O(n+m)
         int m = s.length();
         int n = t.length();
         int i = 0;
