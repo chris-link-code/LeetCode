@@ -10,7 +10,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Application {
     public static void main(String[] args) {
-        log.info("java.version: " + System.getProperty("java.version"));
+        log.info("java.version: {}", System.getProperty("java.version"));
+        log.info("java.vm.name: {}", System.getProperty("java.vm.name"));
+        log.info("os.arch: {}", System.getProperty("os.arch"));
+
         //int processors = Runtime.getRuntime().availableProcessors();
 
 //        Sort.run();
